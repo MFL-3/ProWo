@@ -11,6 +11,9 @@ public class TileSpawner : MonoBehaviour
     GameObject player;
     public Vector3 spawnposition = new Vector3(0, -15, 0);
     public int nexttile;
+    public int prevtile;
+    public int prevprevtile;
+    public int currenttile;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,9 @@ public class TileSpawner : MonoBehaviour
             spawnposition = new Vector3(spawnposition.x + 20, spawnposition.y, 0);   
         }
         nexttile = Random.Range(1, 5);
+        prevtile = 1;
+        currenttile = 1;
+        prevprevtile = 1;
         Place();
     }
 
@@ -39,21 +45,34 @@ public class TileSpawner : MonoBehaviour
     {
         for (int i = 0; i< 100; i++)
         {
+            prevprevtile = prevtile;
+            prevtile = currenttile;
             switch (nexttile)
             {
                 case 1:
                     Instantiate(tile1, spawnposition, tile1.transform.rotation);
-                    nexttile = Random.Range(1, 5);
+                    currenttile = nexttile;
+                    if (prevprevtile == 2 && prevtile == 3 )
+                    {
+                        nexttile = 1;
+                    }
+                    else
+                    {
+                        nexttile = Random.Range(1, 5);
+                    }
                     break;
                 case 2:
                     Instantiate(tile2, spawnposition, tile2.transform.rotation);
+                    currenttile = nexttile;
                     nexttile = Random.Range(1, 5);
                     break;
                 case 3:
                     Instantiate(tile3, spawnposition, tile3.transform.rotation);
+                    currenttile = nexttile;
                     nexttile = 1;
                     break;
                 case 4:
+                    currenttile = nexttile;
                     nexttile = 1;
                     break;
             }
