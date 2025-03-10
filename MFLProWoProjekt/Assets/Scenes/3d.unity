@@ -742,6 +742,7 @@ GameObject:
   - component: {fileID: 1907522473}
   - component: {fileID: 1907522472}
   - component: {fileID: 1907522471}
+  - component: {fileID: 1907522474}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -817,12 +818,24 @@ Transform:
   m_GameObject: {fileID: 1907522469}
   serializedVersion: 2
   m_LocalRotation: {x: 0.29171225, y: -0, z: -0, w: 0.95650613}
-  m_LocalPosition: {x: 0, y: 3.0000007, z: -5.2000003}
-  m_LocalScale: {x: 0.2, y: 0.09519471, z: 0.1539595}
+  m_LocalPosition: {x: 0, y: 48, z: 35}
+  m_LocalScale: {x: 1, y: 0.9348187, z: 1.1054187}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 403875632521768852}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 33.921, y: 0, z: 0}
+--- !u!114 &1907522474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907522469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914672ff4f0f76b43b761e36101a9124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017355537
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +917,7 @@ GameObject:
   - component: {fileID: 2123849527}
   - component: {fileID: 2123849526}
   - component: {fileID: 2123849525}
-  - component: {fileID: 2123849524}
+  - component: {fileID: 2123849530}
   m_Layer: 0
   m_Name: TileDestroyer
   m_TagString: Untagged
@@ -912,18 +925,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2123849524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123849523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a011f14d2d30f47836030efff3514a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2123849525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,7 +965,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123849523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1015,18 +1016,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123849523}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -165, y: -24.295809, z: -1.5784827}
-  m_LocalScale: {x: 1, y: 200.00002, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 22, y: 0, z: -235}
+  m_LocalScale: {x: 300, y: 200.00002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &403875632521768852 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1277132688997419882, guid: e1ff7b002cb832448aaa64e4ba4bfec4, type: 3}
-  m_PrefabInstance: {fileID: 6652887116002783734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &2123849530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123849523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 914672ff4f0f76b43b761e36101a9124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5387823179526256963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1138,16 +1146,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1277132688997419882, guid: e1ff7b002cb832448aaa64e4ba4bfec4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1907522473}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ff7b002cb832448aaa64e4ba4bfec4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1907522473}
   - {fileID: 1480851293}
   - {fileID: 629106800}
   - {fileID: 1378484606}
