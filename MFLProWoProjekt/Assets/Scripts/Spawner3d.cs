@@ -25,10 +25,14 @@ public class Spawner3d : MonoBehaviour
     public int currenttile2;
     public int currenttile3;
 
+    private bool treppe1 = false;
+    private bool treppe2 = false;
+    private bool treppe3 = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameManager.instance.player;
+        player = GameManager3d.instance.player3d;
         for (int i = 0; i < 9; i++)
         {
             Instantiate(tile1, spawnposition1, tile1.transform.rotation);
@@ -40,9 +44,9 @@ public class Spawner3d : MonoBehaviour
         }
         nexttile1 = Random.Range(1, 6);
         nexttile2 = Random.Range(1, 6);
-        if (nexttile1 == 5 && nexttile2 ==5)
+        if (nexttile1 == 5 && nexttile2 == 5)
         {
-            nexttile3 = Random.Range(1, 4);
+            nexttile3 = Random.Range(1, 5);
         }
         else
         {
@@ -64,7 +68,7 @@ public class Spawner3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnposition1.x - player.transform.position.x <= 100)
+        if (spawnposition1.z - player.transform.position.z <= 100)
         {
             Place();
         }
@@ -83,6 +87,10 @@ public class Spawner3d : MonoBehaviour
                 case 1:
                     Instantiate(tile1, spawnposition1, tile1.transform.rotation);
                     currenttile1 = nexttile1;
+                    if (treppe1)
+                    {
+                        treppe1 = false;
+                    }
                     if (prevprevtile1 == 2 && prevtile1 == 3)
                     {
                         nexttile1 = 1;
@@ -93,24 +101,193 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, spawnposition1, tile2.transform.rotation);
+                    Instantiate(tile2, new(-20, 10, spawnposition1.z), tile2.transform.rotation);
                     currenttile1 = nexttile1;
-                    nexttile1 = Random.Range(1, 5);
+                    nexttile1 = Random.Range(1, 6);
+                    if (treppe1)
+                    {
+                        treppe1 = false;
+                    }
                     break;
                 case 3:
-                    Instantiate(tile3, spawnposition1, tile3.transform.rotation);
+                    Instantiate(tile3, new(-20, 30, spawnposition1.z), tile3.transform.rotation);
                     currenttile1 = nexttile1;
-                    nexttile1 = 1;
+                    if (prevtile1 == 2)
+                    {
+                        treppe1 = true;
+                        nexttile1 = Random.Range(1, 5);
+                        if (nexttile1 == 4)
+                        {
+                            nexttile1 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile1 = 1;
+                    }
                     break;
                 case 4:
                     currenttile1 = nexttile1;
                     nexttile1 = 1;
                     break;
                 case 5:
+                    Instantiate(tile5, new(-20, 30, spawnposition1.z), tile5.transform.rotation);
+                    currenttile1 = nexttile1;
+                    if (treppe1)
+                    {
+                        nexttile1 = Random.Range(1, 5);
+                        if (nexttile1 == 4)
+                        {
+                            nexttile1 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile1 = 1;
+                    }
                     break;
             }
-            spawnposition1 = new Vector3(spawnposition1.x + 20, -15, 0);
+            spawnposition1 = new Vector3(-20, 0, spawnposition1.z + 20);
 
+            //Spur2
+            prevprevtile2 = prevtile2;
+            prevtile2 = currenttile2;
+            switch (nexttile2)
+            {
+                case 1:
+                    Instantiate(tile1, spawnposition2, tile1.transform.rotation);
+                    currenttile2 = nexttile2;
+                    if (treppe2)
+                    {
+                        treppe2 = false;
+                    }
+                    if (prevprevtile2 == 2 && prevtile2 == 3)
+                    {
+                        nexttile2 = 1;
+                    }
+                    else
+                    {
+                        nexttile2 = Random.Range(1, 6);
+                    }
+                    break;
+                case 2:
+                    Instantiate(tile2, new(0, 10, spawnposition2.z), tile2.transform.rotation);
+                    currenttile2 = nexttile2;
+                    nexttile2 = Random.Range(1, 6);
+                    if (treppe2)
+                    {
+                        treppe2 = false;
+                    }
+                    break;
+                case 3:
+                    Instantiate(tile3, new(0, 30, spawnposition2.z), tile3.transform.rotation);
+                    currenttile2 = nexttile2;
+                    if (prevtile2 == 2)
+                    {
+                        treppe2 = true;
+                        nexttile2 = Random.Range(1, 5);
+                        if (nexttile2 == 4)
+                        {
+                            nexttile2 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile2 = 1;
+                    }
+                    break;
+                case 4:
+                    currenttile2 = nexttile2;
+                    nexttile2 = 1;
+                    break;
+                case 5:
+                    Instantiate(tile5, new(0, 30, spawnposition2.z), tile5.transform.rotation);
+                    currenttile2 = nexttile2;
+                    if (treppe2)
+                    {
+                        nexttile2 = Random.Range(1, 5);
+                        if (nexttile2 == 4)
+                        {
+                            nexttile2 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile2 = 1;
+                    }
+                    break;
+            }
+            spawnposition2 = new Vector3(0, 0, spawnposition2.z + 20);
+
+            //Spur3
+            prevprevtile3 = prevtile3;
+            prevtile3 = currenttile3;
+            switch (nexttile3)
+            {
+                case 1:
+                    Instantiate(tile1, spawnposition3, tile1.transform.rotation);
+                    currenttile3 = nexttile3;
+                    if (treppe3)
+                    {
+                        treppe3 = false;
+                    }
+                    if (prevprevtile3 == 2 && prevtile3 == 3)
+                    {
+                        nexttile3 = 1;
+                    }
+                    else
+                    {
+                        nexttile3 = Random.Range(1, 6);
+                    }
+                    break;
+                case 2:
+                    Instantiate(tile2, new(20, 10, spawnposition3.z), tile2.transform.rotation);
+                    currenttile3 = nexttile3;
+                    nexttile3 = Random.Range(1, 6);
+                    if (treppe3)
+                    {
+                        treppe3 = false;
+                    }
+                    break;
+                case 3:
+                    Instantiate(tile3, new(20, 30, spawnposition3.z), tile3.transform.rotation);
+                    currenttile3 = nexttile3;
+                    if (prevtile3 == 2)
+                    {
+                        treppe3 = true;
+                        nexttile3 = Random.Range(1, 5);
+                        if (nexttile3 == 4)
+                        {
+                            nexttile3 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile3 = 1;
+                    }
+                    break;
+                case 4:
+                    currenttile3 = nexttile3;
+                    nexttile3 = 1;
+                    break;
+                case 5:
+                    Instantiate(tile5, new(20, 30, spawnposition3.z), tile5.transform.rotation);
+                    currenttile3 = nexttile3;
+                    if (treppe3)
+                    {
+                        nexttile2 = Random.Range(1, 5);
+                        if (nexttile3 == 4)
+                        {
+                            nexttile3 = 5;
+                        }
+                    }
+                    else
+                    {
+                        nexttile3 = 1;
+                    }
+                    break;
+            }
+            spawnposition3 = new Vector3(20, 0, spawnposition3.z + 20);
         }
     }
 }
