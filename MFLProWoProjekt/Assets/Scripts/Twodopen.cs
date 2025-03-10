@@ -9,4 +9,9 @@ public class Twodopen : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void Dreid()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
