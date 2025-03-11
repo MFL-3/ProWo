@@ -106,14 +106,14 @@ public class Player3d : MonoBehaviour
         }
 
         // Tile2 Collision
-        //if (lastposition == gameObject.transform.position.x)
-        //{
-            //Destroy(gameObject);
-        //}
-        //else
-        //{
-            //lastposition = gameObject.transform.position.x;
-        //}
+        if (lastposition == gameObject.transform.position.z)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            lastposition = gameObject.transform.position.z;
+        }
 
         // Runterfallen
         if (transform.position.y <= -40)

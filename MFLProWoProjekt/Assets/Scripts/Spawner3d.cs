@@ -131,7 +131,7 @@ public class Spawner3d : MonoBehaviour
                     nexttile1 = 1;
                     break;
                 case 5:
-                    Instantiate(tile5, new(-20, 30, spawnposition1.z), tile5.transform.rotation);
+                    Instantiate(tile5, new(-20, 10, spawnposition1.z), tile5.transform.rotation);
                     currenttile1 = nexttile1;
                     if (treppe1)
                     {
@@ -201,7 +201,7 @@ public class Spawner3d : MonoBehaviour
                     nexttile2 = 1;
                     break;
                 case 5:
-                    Instantiate(tile5, new(0, 30, spawnposition2.z), tile5.transform.rotation);
+                    Instantiate(tile5, new(0, 10, spawnposition2.z), tile5.transform.rotation);
                     currenttile2 = nexttile2;
                     if (treppe2)
                     {
@@ -271,7 +271,7 @@ public class Spawner3d : MonoBehaviour
                     nexttile3 = 1;
                     break;
                 case 5:
-                    Instantiate(tile5, new(20, 30, spawnposition3.z), tile5.transform.rotation);
+                    Instantiate(tile5, new(20, 10, spawnposition3.z), tile5.transform.rotation);
                     currenttile3 = nexttile3;
                     if (treppe3)
                     {

@@ -15,6 +15,6 @@ public class Cameramovement3d : MonoBehaviour
 
     void Movement()
     {
-        gameObject.transform.position += GameManager3d.instance.speed * Time.deltaTime * Vector3.forward;
+        gameObject.transform.position = new Vector3(GameManager3d.instance.player3d.transform.position.x, GameManager3d.instance.player3d.transform.position.y + 36, GameManager3d.instance.player3d.transform.position.z - 25);
     }
 }
