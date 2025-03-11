@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         }
 
         //Jumping stop
-        if (GameManager.instance.jumping && gameObject.transform.position.y >= GameManager.instance.jumpposition.y + 25)
+        if (GameManager.instance.jumping && gameObject.transform.position.y >= GameManager.instance.jumpposition.y + 35)
         {
             GameManager.instance.jumping = false;
             jumpVector = Vector3.zero;

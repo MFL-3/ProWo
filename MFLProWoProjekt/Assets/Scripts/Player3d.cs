@@ -55,7 +55,7 @@ public class Player3d : MonoBehaviour
         }
 
         //Jumping stop
-        if (GameManager3d.instance.jumping && gameObject.transform.position.y >= GameManager3d.instance.jumpposition.y + 25)
+        if (GameManager3d.instance.jumping && gameObject.transform.position.y >= GameManager3d.instance.jumpposition.y + 35)
         {
             GameManager3d.instance.jumping = false;
             jumpVector = Vector3.zero;

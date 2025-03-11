@@ -420,9 +420,11 @@ MonoBehaviour:
   tile2: {fileID: 1911864484046422280, guid: 4f22cd76e9af71848a441b7c9dcbade4, type: 3}
   tile3: {fileID: 5322435764450733665, guid: bc649cac50e5a9640b5d932a1d1dae25, type: 3}
   tile5: {fileID: 7678530532618101374, guid: 20113d96d826a0148b3fc2e635c03555, type: 3}
+  absperr: {fileID: 8754760840645171786, guid: 40ef3394ae8a01d46af622e7e51e2d72, type: 3}
   spawnposition1: {x: 0, y: -20, z: 0}
   spawnposition2: {x: 0, y: 0, z: 0}
   spawnposition3: {x: 0, y: 20, z: 0}
+  spawnposition4: {x: -30, y: 70, z: 980}
   nexttile1: 0
   nexttile2: 0
   nexttile3: 0
@@ -677,7 +679,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -984,7 +986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277132688997419882, guid: e1ff7b002cb832448aaa64e4ba4bfec4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1277132688997419882, guid: e1ff7b002cb832448aaa64e4ba4bfec4, type: 3}
       propertyPath: m_LocalRotation.w

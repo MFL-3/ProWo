@@ -8,10 +8,12 @@ public class Spawner3d : MonoBehaviour
     [SerializeField] GameObject tile2;
     [SerializeField] GameObject tile3;
     [SerializeField] GameObject tile5;
+    [SerializeField] GameObject absperr;
     GameObject player;
     public Vector3 spawnposition1 = new Vector3(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
     public Vector3 spawnposition3 = new Vector3(20, 0, 0);
+    public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
     public int nexttile1;
     public int nexttile2;
     public int nexttile3;
@@ -63,6 +65,7 @@ public class Spawner3d : MonoBehaviour
         prevprevtile2 = 1;
         prevprevtile3 = 1;
         Place();
+        Instantiate(absperr, spawnposition4, absperr.transform.rotation);
     }
 
     // Update is called once per frame
@@ -71,6 +74,12 @@ public class Spawner3d : MonoBehaviour
         if (spawnposition1.z - player.transform.position.z <= 100)
         {
             Place();
+        }
+
+        if (player.transform.position.z - spawnposition4.z  >= 500)
+        {
+            spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
+            Instantiate(absperr, spawnposition4, absperr.transform.rotation);
         }
 
     }
