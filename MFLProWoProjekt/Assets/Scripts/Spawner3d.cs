@@ -71,7 +71,7 @@ public class Spawner3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnposition1.z - player.transform.position.z <= 100)
+        if (spawnposition1.z - player.transform.position.z <= 500)
         {
             Place();
         }
@@ -284,7 +284,7 @@ public class Spawner3d : MonoBehaviour
                     currenttile3 = nexttile3;
                     if (treppe3)
                     {
-                        nexttile2 = Random.Range(1, 5);
+                        nexttile3 = Random.Range(1, 5);
                         if (nexttile3 == 4)
                         {
                             nexttile3 = 5;

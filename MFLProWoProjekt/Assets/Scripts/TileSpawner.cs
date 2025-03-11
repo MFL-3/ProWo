@@ -15,6 +15,8 @@ public class TileSpawner : MonoBehaviour
     public int prevprevtile;
     public int currenttile;
 
+    private bool treppe = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,10 @@ public class TileSpawner : MonoBehaviour
                 case 1:
                     Instantiate(tile1, spawnposition, tile1.transform.rotation);
                     currenttile = nexttile;
+                    if (treppe)
+                    {
+                        treppe = false;
+                    }
                     if (prevprevtile == 2 && prevtile == 3 )
                     {
                         nexttile = 1;
@@ -63,13 +69,30 @@ public class TileSpawner : MonoBehaviour
                     break;
                 case 2:
                     Instantiate(tile2, spawnposition, tile2.transform.rotation);
+                    if (treppe)
+                    {
+                        treppe = false;
+                    }
                     currenttile = nexttile;
                     nexttile = Random.Range(1, 5);
                     break;
                 case 3:
                     Instantiate(tile3, spawnposition, tile3.transform.rotation);
+                    if(currenttile == 2)
+                    {
+                        treppe = true;
+                    }
                     currenttile = nexttile;
-                    nexttile = 1;
+                    if (treppe)
+                    {
+                        nexttile = Random.Range(1, 4);
+                    }
+                    else
+                    {
+                        nexttile = 1;
+                    }
+                        
+
                     break;
                 case 4:
                     currenttile = nexttile;
