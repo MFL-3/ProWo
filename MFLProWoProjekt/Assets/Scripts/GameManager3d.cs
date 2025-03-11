@@ -13,7 +13,7 @@ public class GameManager3d : MonoBehaviour
     public Vector3 duckposition;
     public Vector3 jumpposition;
     public GameObject player3d;
-    public float speed = 20;
+    public float speed = 30;
     public float gravity = 80;
     private float score = 0;
     public int scorereal = 0;
@@ -32,7 +32,7 @@ public class GameManager3d : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        highScore = MenuHiScore.HiScore2D;
+        highScore = MenuHiScore.HiScore3D;
         score += Time.deltaTime;
         scorereal = (int)score;
         if (scorereal > highScore)
@@ -57,7 +57,7 @@ public class GameManager3d : MonoBehaviour
 
         if (gameOver)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         }
     }
 }
