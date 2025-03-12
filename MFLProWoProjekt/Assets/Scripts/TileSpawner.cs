@@ -55,6 +55,10 @@ public class TileSpawner : MonoBehaviour
                 case 1:
                     Instantiate(tile1, spawnposition, tile1.transform.rotation);
                     currenttile = nexttile;
+                    if (wastreppe)
+                    {
+                        wastreppe = false;
+                    }
                     if (treppe)
                     {
                         treppe = false;
@@ -64,10 +68,6 @@ public class TileSpawner : MonoBehaviour
                     else
                     {
                         nexttile = Random.Range(1, 5);
-                    }
-                    if (wastreppe)
-                    {
-                        wastreppe = false;
                     }
                     break;
                 case 2:
@@ -81,9 +81,14 @@ public class TileSpawner : MonoBehaviour
                     break;
                 case 3:
                     Instantiate(tile3, spawnposition, tile3.transform.rotation);
-                    if(currenttile == 2 || wastreppe)
+                    if(currenttile == 2)
                     {
                         treppe = true;
+                    }
+                    if (wastreppe)
+                    {
+                        treppe = true;
+                        wastreppe = false;
                     }
                     currenttile = nexttile;
                     if (treppe)

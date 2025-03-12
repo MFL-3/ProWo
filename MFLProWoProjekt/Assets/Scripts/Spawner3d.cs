@@ -13,6 +13,7 @@ public class Spawner3d : MonoBehaviour
     public Vector3 spawnposition1 = new Vector3(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
     public Vector3 spawnposition3 = new Vector3(20, 0, 0);
+    //public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
     public int nexttile1;
     public int nexttile2;
     public int nexttile3;
@@ -74,6 +75,13 @@ public class Spawner3d : MonoBehaviour
         {
             Place();
         }
+
+        //if (player.transform.position.z - spawnposition4.z  >= 500)
+        //{
+            //spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
+            //Instantiate(absperr, spawnposition4, absperr.transform.rotation);
+        //}
+
     }
 
     void Place()
@@ -91,9 +99,6 @@ public class Spawner3d : MonoBehaviour
                     if (treppe1)
                     {
                         treppe1 = false;
-                    }
-                    if (prevprevtile1 == 2 && prevtile1 == 3)
-                    {
                         nexttile1 = 1;
                     }
                     else if (nexttile2 == 5)
@@ -146,8 +151,9 @@ public class Spawner3d : MonoBehaviour
                 case 5:
                     Instantiate(tile5, new(-20, 10, spawnposition1.z), tile5.transform.rotation);
                     currenttile1 = nexttile1;
-                    if (treppe1)
+                    if (prevtile1 == 2)
                     {
+                        treppe1 = true;
                         nexttile1 = Random.Range(1, 5);
                         if (nexttile1 == 4)
                         {
@@ -173,9 +179,6 @@ public class Spawner3d : MonoBehaviour
                     if (treppe2)
                     {
                         treppe2 = false;
-                    }
-                    if (prevprevtile2 == 2 && prevtile2 == 3)
-                    {
                         nexttile2 = 1;
                     }
                     else if (currenttile1 == 5)
@@ -191,7 +194,7 @@ public class Spawner3d : MonoBehaviour
                     Instantiate(tile2, new(0, 10, spawnposition2.z), tile2.transform.rotation);
                     currenttile2 = nexttile2;
 
-                    if (currenttile1 == 5 || currenttile3 ==5)
+                    if (currenttile1 == 5)
                     {
                         nexttile2 = Random.Range(1, 5);
                     }
@@ -229,8 +232,9 @@ public class Spawner3d : MonoBehaviour
                 case 5:
                     Instantiate(tile5, new(0, 10, spawnposition2.z), tile5.transform.rotation);
                     currenttile2 = nexttile2;
-                    if (treppe2)
+                    if (prevtile2 == 2)
                     {
+                        treppe2 = true;
                         nexttile2 = Random.Range(1, 5);
                         if (nexttile2 == 4)
                         {
@@ -257,18 +261,9 @@ public class Spawner3d : MonoBehaviour
                     if (treppe3)
                     {
                         treppe3 = false;
-                    }
-
-
-                    if (prevprevtile3 == 2 && prevtile3 == 3)
-                    {
                         nexttile3 = 1;
                     }
-                    else if (nexttile1 == 5 && nexttile2 == 5)
-                    {
-                        nexttile3 = Random.Range(1, 5);
-                    }
-                    else if (currenttile2 == 5)
+                    else if ((nexttile1 == 5 && nexttile2 == 5) || currenttile2 == 5)
                     {
                         nexttile3 = Random.Range(1, 5);
                     }
@@ -285,11 +280,7 @@ public class Spawner3d : MonoBehaviour
                     {
                         treppe3 = false;
                     }
-                    if (nexttile1 == 5 && nexttile2 == 5)
-                    {
-                        nexttile3 = Random.Range(1, 5);
-                    }
-                    else if (currenttile2 == 5)
+                    if ((nexttile1 == 5 && nexttile2 == 5) || currenttile2 == 5)
                     {
                         nexttile3 = Random.Range(1, 5);
                     }
@@ -297,7 +288,7 @@ public class Spawner3d : MonoBehaviour
                     {
                         nexttile3 = Random.Range(1, 6);
                     }
-                        break;
+                    break;
                 case 3:
                     Instantiate(tile3, new(20, 30, spawnposition3.z), tile3.transform.rotation);
                     currenttile3 = nexttile3;
@@ -322,8 +313,9 @@ public class Spawner3d : MonoBehaviour
                 case 5:
                     Instantiate(tile5, new(20, 10, spawnposition3.z), tile5.transform.rotation);
                     currenttile3 = nexttile3;
-                    if (treppe3)
+                    if (prevtile3 == 2)
                     {
+                        treppe3 = true;
                         nexttile3 = Random.Range(1, 5);
                         if (nexttile3 == 4)
                         {

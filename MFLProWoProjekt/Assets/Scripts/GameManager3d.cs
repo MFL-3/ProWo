@@ -47,7 +47,7 @@ public class GameManager3d : MonoBehaviour
                 speed += 2* Time.deltaTime;
             }
             currentframe += 1;
-            if (currentframe == 3)
+            if (currentframe == 10)
             {
                 currentframe = 0;
             }
