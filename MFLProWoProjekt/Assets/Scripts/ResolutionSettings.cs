@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class ResolutionSettings : MonoBehaviour
 {
-    public TMP_Dropdown resolutionDropdown;
+    //public TMP_Dropdown resolutionDropdown;
 
     List<Resolution> predefined16By9Resolutions = new List<Resolution>
     {
@@ -20,14 +20,14 @@ public class ResolutionSettings : MonoBehaviour
 
     List<Resolution> possibleResolutionsForUsersMonitor = new List<Resolution> { };
 
-    void Start()
+    void Awake()
     {
         PopulateResolutionDropdown();
     }
 
     void PopulateResolutionDropdown()
     {
-        resolutionDropdown.ClearOptions();
+        //resolutionDropdown.ClearOptions();
 
         List<string> options = new List<string>();
 
@@ -57,9 +57,9 @@ public class ResolutionSettings : MonoBehaviour
             }
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        //resolutionDropdown.AddOptions(options);
+        //resolutionDropdown.value = currentResolutionIndex;
+        //resolutionDropdown.RefreshShownValue();
 
         SetResolution(currentResolutionIndex);
     }
