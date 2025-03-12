@@ -13,7 +13,6 @@ public class Spawner3d : MonoBehaviour
     public Vector3 spawnposition1 = new Vector3(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
     public Vector3 spawnposition3 = new Vector3(20, 0, 0);
-    //public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
     public int nexttile1;
     public int nexttile2;
     public int nexttile3;
@@ -75,13 +74,6 @@ public class Spawner3d : MonoBehaviour
         {
             Place();
         }
-
-        //if (player.transform.position.z - spawnposition4.z  >= 500)
-        //{
-            //spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
-            //Instantiate(absperr, spawnposition4, absperr.transform.rotation);
-        //}
-
     }
 
     void Place()
@@ -199,7 +191,7 @@ public class Spawner3d : MonoBehaviour
                     Instantiate(tile2, new(0, 10, spawnposition2.z), tile2.transform.rotation);
                     currenttile2 = nexttile2;
 
-                    if (currenttile1 == 5)
+                    if (currenttile1 == 5 || currenttile3 ==5)
                     {
                         nexttile2 = Random.Range(1, 5);
                     }
