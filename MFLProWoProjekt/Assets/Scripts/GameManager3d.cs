@@ -45,7 +45,6 @@ public class GameManager3d : MonoBehaviour
             if (currentframe == 0)
             {
                 speed += 2* Time.deltaTime;
-                Debug.Log(speed);
             }
             currentframe += 1;
             if (currentframe == 3)
