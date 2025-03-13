@@ -1200,7 +1200,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 52a59d071274772a922cd61ce527981e
+      Hash: 26ce1677a7798423cf1544cd613abdc3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player3d
@@ -1589,5 +1589,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameOver2D.unity
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
-  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    0.0/ProWoProjekt.exe
+  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Neuer
+    Ordner/ProWoProjekt.exe

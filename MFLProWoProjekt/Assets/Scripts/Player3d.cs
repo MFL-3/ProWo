@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player3d : MonoBehaviour
 {
@@ -8,14 +9,18 @@ public class Player3d : MonoBehaviour
     private Vector3 moveVector;
     private Vector3 gravityMovement;
     private Vector3 jumpVector;
+    private Vector3 spurwechsel;
     private float currentGravity = 1f;
     private float lastposition;
+    [SerializeField] GameObject textfeld;
+    private TextMeshProUGUI textMeshProUGUI;
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = gameObject.GetComponent<CharacterController>();
         lastposition = gameObject.transform.position.x;
+        textMeshProUGUI = textfeld.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -44,7 +49,7 @@ public class Player3d : MonoBehaviour
         }
 
         //Spuren wechseln
-        Vector3 spurwechsel = Vector3.right * 500 * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Time.deltaTime;
+        spurwechsel = Vector3.right * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * 3f;
 
         //Jump Start
         if (Input.GetButtonDown("Jump") && characterController.isGrounded)
