@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private float score = 0;
     public int scorereal = 0;
     public int highScore = 0;
+    public bool theend = false;
 
     private int currentframe = 0;
     private float timer = 15;
@@ -31,29 +32,32 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        highScore = MenuHiScore.HiScore2D;
-        score += Time.deltaTime;
-        scorereal = (int)score;
-        if (scorereal > highScore)
+        if (!theend)
         {
-            highScore = scorereal;
-        }
-
-        if (timer <= 0)
-        {
-            if (currentframe == 0)
+            timer -= Time.deltaTime;
+            highScore = MenuHiScore.HiScore2D;
+            score += Time.deltaTime;
+            scorereal = (int)score;
+            if (scorereal > highScore)
             {
-                speed += Time.deltaTime;
+                highScore = scorereal;
             }
-            currentframe += 1;
-            if (currentframe == 10)
-            {
-                currentframe = 0;
-            }
-        }
 
-        gravity = 5 * speed;
+            if (timer <= 0)
+            {
+                if (currentframe == 0)
+                {
+                    speed += Time.deltaTime;
+                }
+                currentframe += 1;
+                if (currentframe == 10)
+                {
+                    currentframe = 0;
+                }
+            }
+
+            gravity = 5 * speed;
+        }
 
         if (gameOver)
         {

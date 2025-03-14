@@ -88,7 +88,16 @@ public class Player : MonoBehaviour
         Vector3 finalMovement = moveVector + gravityMovement + jumpVector;
 
         //Move
-        characterController.Move(finalMovement * Time.deltaTime);
+        if (!GameManager.instance.theend)
+        {
+            characterController.Move(finalMovement * Time.deltaTime);
+        }
+        else
+        {
+            GameManager.instance.jumping = false;
+            characterController.Move(gravityMovement * Time.deltaTime);
+        }
+
 
         //Aufstehen
         if (GameManager.instance.ducking)
@@ -103,6 +112,15 @@ public class Player : MonoBehaviour
         {
             GameManager.instance.jumping = false;
             currentGravity = 1;
+        }
+
+        if(lastposition >= gameObject.transform.position.x)
+        {
+            GameManager.instance.theend = true;
+        }
+        else
+        {
+            lastposition = gameObject.transform.position.x;
         }
 
         // Runterfallen
