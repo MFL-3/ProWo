@@ -328,6 +328,7 @@
 "Assets/Scripts/TileSpawner.cs"
 "Assets/Scripts/transparentchange.cs"
 "Assets/Scripts/Twodopen.cs"
+"Assets/Scripts/wele2d.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

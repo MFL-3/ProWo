@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int scorereal = 0;
     public int highScore = 0;
     public bool theend = false;
+    public bool start = true;
 
     private int currentframe = 0;
     private float timer = 15;
@@ -29,13 +30,17 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        highScore = MenuHiScore.HiScore2D;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (!theend)
+        if (!theend && !start)
         {
             timer -= Time.deltaTime;
-            highScore = MenuHiScore.HiScore2D;
+
             score += Time.deltaTime;
             scorereal = (int)score;
             if (scorereal > highScore)

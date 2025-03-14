@@ -8,7 +8,7 @@ public class Cameramovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.gameOver == false)
+        if (!GameManager.instance.theend && !GameManager.instance.start)
         {
             Movement();
         }

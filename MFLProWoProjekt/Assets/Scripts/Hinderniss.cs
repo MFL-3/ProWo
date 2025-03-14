@@ -9,7 +9,7 @@ public class Hinderniss : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            GameManager.instance.theend = true;
         }
     }
 }

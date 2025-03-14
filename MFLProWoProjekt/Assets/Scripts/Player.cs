@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     private Vector3 jumpVector;
     private float currentGravity = 1f;
     private float lastposition;
-    
+    [SerializeField] GameObject welle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,7 +89,7 @@ public class Player : MonoBehaviour
         Vector3 finalMovement = moveVector + gravityMovement + jumpVector;
 
         //Move
-        if (!GameManager.instance.theend)
+        if ((!GameManager.instance.theend) && (!GameManager.instance.start))
         {
             characterController.Move(finalMovement * Time.deltaTime);
         }
@@ -114,7 +115,7 @@ public class Player : MonoBehaviour
             currentGravity = 1;
         }
 
-        if(lastposition >= gameObject.transform.position.x)
+        if(lastposition >= gameObject.transform.position.x && (!GameManager.instance.start))
         {
             GameManager.instance.theend = true;
         }
@@ -128,7 +129,13 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       
+
+        //Sterben
+        if (gameObject.transform.position.x <= welle.transform.position.x + 10)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
    
