@@ -181,7 +181,7 @@ public class Spawner3d : MonoBehaviour
                         treppe2 = false;
                         nexttile2 = 1;
                     }
-                    else if (currenttile1 == 5)
+                    else if (currenttile1 == 5 || nexttile3 == 5)
                     {
                         nexttile2 = Random.Range(1, 5);
                     }
