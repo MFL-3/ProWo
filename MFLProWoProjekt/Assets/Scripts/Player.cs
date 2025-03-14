@@ -105,16 +105,6 @@ public class Player : MonoBehaviour
             currentGravity = 1;
         }
 
-        // Tile2 Collision
-        if (lastposition == gameObject.transform.position.x)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            lastposition = gameObject.transform.position.x;
-        }
-
         // Runterfallen
         if (transform.position.y <= -40)
         {

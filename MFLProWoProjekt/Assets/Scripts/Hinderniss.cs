@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class Hinderniss : MonoBehaviour
 {
-    
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
