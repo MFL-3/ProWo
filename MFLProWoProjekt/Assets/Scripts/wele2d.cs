@@ -16,10 +16,10 @@ public class wele2d : MonoBehaviour
         }
         else
         {
-            Movement(GameManager.instance.speed * 5);
+            Movement(GameManager.instance.speed * 2);
         }
 
-        if(gameObject.transform.position.y >= 57)
+        if(gameObject.transform.position.y >= 43)
         {
             GameManager.instance.start = false;
         }

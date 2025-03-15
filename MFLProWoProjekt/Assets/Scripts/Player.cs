@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         }
 
         //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
         {
             GameManager.instance.jumping = true;
             GameManager.instance.jumpposition = gameObject.transform.position;
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         }
 
         // Ducken
-        if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded)
+        if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start) && (!GameManager.instance.theend))
         {
             //Scale
             gameObject.transform.localScale = new Vector3(5, 6, 1);
@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
         // Runterfallen
         if (transform.position.y <= -40)
         {
-            Destroy(gameObject);
+            GameManager.instance.theend = true;
         }
 
         //Sterben

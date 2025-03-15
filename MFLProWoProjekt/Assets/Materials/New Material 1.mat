@@ -13,6 +13,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
+  - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -26,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bd61a34ca871cca42a78564bffa9fe1b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: -0.39, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dc49e5d3bca83d249ba5db5ae9a66564, type: 3}
+        m_Texture: {fileID: 2800000, guid: 330cb1b831ebfcd4f8e54b4ea6a9d190, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: -0.39, y: 0}
     - _MetallicGlossMap:

@@ -9,7 +9,6 @@ ScriptsOnlyBuild:
     - GameManager3d
     - HighScoreText
     - HighScoreText3d
-    - Hinderniss
     - Hinderniss1
     - HindernissDestroyer
     - MenuHiScore
@@ -23,6 +22,18 @@ ScriptsOnlyBuild:
     - Twodopen
     - transparentchange
     - wele2d
+    Unity.ProBuilder.Editor.dll:
+    - UnityEditor.ProBuilder.MaterialEditor
+    - UnityEditor.ProBuilder.MaterialPalette
+    - UnityEditor.ProBuilder.PositionToolContext
+    - UnityEditor.ProBuilder.ProBuilderEditor
+    - UnityEditor.ProBuilder.ProBuilderShapeEditor
+    - UnityEditor.ProBuilder.ProbuilderMoveTool
+    - UnityEditor.ProBuilder.ProbuilderRotateTool
+    - UnityEditor.ProBuilder.ProbuilderScaleTool
+    Unity.ProBuilder.dll:
+    - UnityEngine.ProBuilder.ProBuilderMesh
+    - UnityEngine.ProBuilder.Shapes.ProBuilderShape
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -49,6 +60,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   serializedClasses:
+    Unity.ProBuilder:
+    - UnityEngine.ProBuilder.AutoUnwrapSettings
+    - UnityEngine.ProBuilder.Face
+    - UnityEngine.ProBuilder.Shapes.Cube
+    - UnityEngine.ProBuilder.SharedVertex
+    - UnityEngine.ProBuilder.UnwrapParameters
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
@@ -129,35 +146,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1974}
+      Script: {instanceID: 1936}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 4060}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 4064}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5466}
+      Script: {instanceID: 5348}
     - Class: 114
-      Script: {instanceID: 5498}
+      Script: {instanceID: 5470}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 5988}
+      Script: {instanceID: 5992}
     - Class: 114
-      Script: {instanceID: 6102}
+      Script: {instanceID: 6106}
     - Class: 114
-      Script: {instanceID: 7682}
+      Script: {instanceID: 7686}
     - Class: 114
-      Script: {instanceID: 7792}
+      Script: {instanceID: 7796}
     - Class: 114
-      Script: {instanceID: 24764}
+      Script: {instanceID: 33720}
+    - Class: 114
+      Script: {instanceID: 34570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,6 +198,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 850595691
       Script: {instanceID: 0}
     Assets/Scenes/3d.unity:
     - Class: 1
@@ -212,33 +233,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1704}
+      Script: {instanceID: 1706}
     - Class: 114
-      Script: {instanceID: 2226}
+      Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 2462}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3362}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5740}
+      Script: {instanceID: 5744}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6102}
+      Script: {instanceID: 6106}
     - Class: 114
-      Script: {instanceID: 6954}
+      Script: {instanceID: 6958}
     - Class: 114
-      Script: {instanceID: 7460}
+      Script: {instanceID: 7464}
     - Class: 114
-      Script: {instanceID: 7726}
+      Script: {instanceID: 7730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,23 +300,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3846}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6102}
+      Script: {instanceID: 6106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -334,23 +355,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6102}
+      Script: {instanceID: 6106}
     - Class: 114
-      Script: {instanceID: 7242}
+      Script: {instanceID: 7246}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -391,35 +412,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 2188}
+      Script: {instanceID: 2192}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3986}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4098}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 4352}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 5060}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5620}
+      Script: {instanceID: 5624}
     - Class: 114
-      Script: {instanceID: 5780}
+      Script: {instanceID: 5784}
     - Class: 114
-      Script: {instanceID: 6102}
+      Script: {instanceID: 6106}
     - Class: 114
-      Script: {instanceID: 7438}
+      Script: {instanceID: 7442}
     - Class: 114
-      Script: {instanceID: 7840}
+      Script: {instanceID: 7844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -515,6 +536,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: a7b522145936885e209b70f33884f718
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: wele2d
   - hash:
       serializedVersion: 2
       Hash: 24afa487de9fc1e6e46de44b480e2130
@@ -901,7 +928,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ed4bd80880ecced65b050b594298f596
+      Hash: ff2de392b5120f86e83a09de32e36f4c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TileSpawner
@@ -1591,10 +1618,58 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: a7b522145936885e209b70f33884f718
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: wele2d
+      Hash: df79ccb4cd3f3f8a5449fcd589774b35
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PreferenceDictionary
+  - hash:
+      serializedVersion: 2
+      Hash: 32e45e9321b32487564fbc9be7df51eb
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ProBuilderMesh
+  - hash:
+      serializedVersion: 2
+      Hash: e3e8664035357fc3cb2713a5c719e060
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColliderBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: c9ea7fc6e584a91f99e24369a904c607
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: Entity
+  - hash:
+      serializedVersion: 2
+      Hash: 19c7094e1c1b151057c372890e57f46f
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: BezierShape
+  - hash:
+      serializedVersion: 2
+      Hash: bf16f3f7cc6924018428428f7664a0d0
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PolyShape
+  - hash:
+      serializedVersion: 2
+      Hash: db79736741eab4b57f517a51185b9563
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder.Shapes
+    className: ProBuilderShape
+  - hash:
+      serializedVersion: 2
+      Hash: fddc1d0815370c41972670aaf78cbc9a
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColorPalette
+  - hash:
+      serializedVersion: 2
+      Hash: ab146b9b456a0ac8917d892a3f2e3f4b
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: TriggerBehaviour
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1603,4 +1678,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    1.0/ProWoProjekt.exe
+    1.1/ProWoProjekt.exe

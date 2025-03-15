@@ -97,7 +97,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 345388438}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -269,6 +269,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190989915}
   m_CullTransparentMesh: 1
+--- !u!850595691 &345388438
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 6
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 1
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 1
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_LightmapCompression: 3
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 256
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentImportanceSampling: 1
+  m_PVRFilteringMode: 1
+  m_PVRDenoiserTypeDirect: 1
+  m_PVRDenoiserTypeIndirect: 1
+  m_PVRDenoiserTypeAO: 1
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_PVRTiledBaking: 0
+  m_NumRaysToShootPerTexel: -1
+  m_RespectSceneVisibilityWhenBakingGI: 0
 --- !u!1 &546228343
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,9 +525,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile1: {fileID: 8578684406225747759, guid: ccb04ae513c5678418425d8c71ca3b67, type: 3}
-  tile2: {fileID: 8578684406225747759, guid: 8cd85bf9fa91e384b9714e35dac7ab43, type: 3}
-  tile3: {fileID: 8578684406225747759, guid: 89c34bad9ce04b64ea71228c65f2ddd1, type: 3}
-  tile4: {fileID: 8324820997605156093, guid: df4057d918ac2504bbbaebe912d92496, type: 3}
+  tile2: {fileID: 4244679112657525125, guid: f243b62035825bb4b973bd6c83a4d9b4, type: 3}
+  tile3: {fileID: 4355957125470737910, guid: c1c8293b133558044a19b5d938e40863, type: 3}
   spawnposition: {x: 0, y: -15, z: 0}
   nexttile: 0
   prevtile: 0
@@ -598,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 1263912720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26666668, y: -1.325, z: -1}
+  m_LocalPosition: {x: 0.26666668, y: -1.3000001, z: 0.20000076}
   m_LocalScale: {x: 0.6666667, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -991,8 +1054,8 @@ Transform:
   m_GameObject: {fileID: 1993811394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: -47, z: -2}
-  m_LocalScale: {x: 30, y: 40, z: 1}
+  m_LocalPosition: {x: 38.5, y: -9, z: -42}
+  m_LocalScale: {x: 15, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2022429018}
@@ -1157,7 +1220,7 @@ Transform:
   m_GameObject: {fileID: 2022429016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4333334, y: -0.90000004, z: -2}
+  m_LocalPosition: {x: -1.46, y: -0.90000004, z: -2}
   m_LocalScale: {x: 1, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

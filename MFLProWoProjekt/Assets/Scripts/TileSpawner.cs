@@ -7,7 +7,6 @@ public class TileSpawner : MonoBehaviour
     public GameObject tile1;
     public GameObject tile2;
     public GameObject tile3;
-    public GameObject tile4;
     GameObject player;
     public Vector3 spawnposition = new Vector3(0, -15, 0);
     public int nexttile;
@@ -71,7 +70,7 @@ public class TileSpawner : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, spawnposition, tile2.transform.rotation);
+                    Instantiate(tile2, new(spawnposition.x - 10, spawnposition.y, spawnposition.z), tile2.transform.rotation);
                     if (treppe)
                     {
                         treppe = false;
