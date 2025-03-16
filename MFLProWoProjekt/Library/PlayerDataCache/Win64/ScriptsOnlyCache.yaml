@@ -22,15 +22,6 @@ ScriptsOnlyBuild:
     - Twodopen
     - transparentchange
     - wele2d
-    Unity.ProBuilder.Editor.dll:
-    - UnityEditor.ProBuilder.MaterialEditor
-    - UnityEditor.ProBuilder.MaterialPalette
-    - UnityEditor.ProBuilder.PositionToolContext
-    - UnityEditor.ProBuilder.ProBuilderEditor
-    - UnityEditor.ProBuilder.ProBuilderShapeEditor
-    - UnityEditor.ProBuilder.ProbuilderMoveTool
-    - UnityEditor.ProBuilder.ProbuilderRotateTool
-    - UnityEditor.ProBuilder.ProbuilderScaleTool
     Unity.ProBuilder.dll:
     - UnityEngine.ProBuilder.ProBuilderMesh
     - UnityEngine.ProBuilder.Shapes.ProBuilderShape
@@ -48,6 +39,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -137,51 +136,59 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1936}
+      Script: {instanceID: 2006}
     - Class: 114
-      Script: {instanceID: 1978}
+      Script: {instanceID: 2052}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 4064}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 4332}
     - Class: 114
-      Script: {instanceID: 5348}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 5470}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 5754}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 5888}
     - Class: 114
-      Script: {instanceID: 5992}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 7686}
+      Script: {instanceID: 6474}
     - Class: 114
-      Script: {instanceID: 7796}
+      Script: {instanceID: 6606}
     - Class: 114
-      Script: {instanceID: 33720}
+      Script: {instanceID: 8424}
     - Class: 114
-      Script: {instanceID: 34570}
+      Script: {instanceID: 8540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -233,33 +240,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1706}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 2230}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 2466}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 3572}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 5744}
+      Script: {instanceID: 6196}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6606}
     - Class: 114
-      Script: {instanceID: 6958}
+      Script: {instanceID: 7586}
     - Class: 114
-      Script: {instanceID: 7464}
+      Script: {instanceID: 8180}
     - Class: 114
-      Script: {instanceID: 7730}
+      Script: {instanceID: 8472}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -300,23 +307,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1650}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 3846}
+      Script: {instanceID: 4098}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6606}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -355,23 +362,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1650}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6606}
     - Class: 114
-      Script: {instanceID: 7246}
+      Script: {instanceID: 7934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -412,35 +419,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1650}
     - Class: 114
-      Script: {instanceID: 2192}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 3990}
+      Script: {instanceID: 4252}
     - Class: 114
-      Script: {instanceID: 4080}
+      Script: {instanceID: 4360}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 4372}
     - Class: 114
-      Script: {instanceID: 4356}
+      Script: {instanceID: 4650}
     - Class: 114
-      Script: {instanceID: 5064}
+      Script: {instanceID: 5442}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 6064}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 6106}
+      Script: {instanceID: 6606}
     - Class: 114
-      Script: {instanceID: 7442}
+      Script: {instanceID: 8158}
     - Class: 114
-      Script: {instanceID: 7844}
+      Script: {instanceID: 8590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -652,6 +659,12 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
+      Hash: db79736741eab4b57f517a51185b9563
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder.Shapes
+    className: ProBuilderShape
+  - hash:
+      serializedVersion: 2
       Hash: ed8bac09ffacadca9994789e381c69ce
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -662,6 +675,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: CoroutineRunner
+  - hash:
+      serializedVersion: 2
+      Hash: fddc1d0815370c41972670aaf78cbc9a
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColorPalette
   - hash:
       serializedVersion: 2
       Hash: 6ddf94363c6ce4b02d9fdd51290cb0f9
@@ -716,6 +735,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 19c7094e1c1b151057c372890e57f46f
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: BezierShape
   - hash:
       serializedVersion: 2
       Hash: 1d830bc5cfaaf24301dffea2877f4bea
@@ -862,6 +887,12 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
+      Hash: bf16f3f7cc6924018428428f7664a0d0
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PolyShape
+  - hash:
+      serializedVersion: 2
       Hash: 552dca338f20933ce362ebbe559a6aa6
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -934,16 +965,16 @@ ScriptsOnlyBuild:
     className: TileSpawner
   - hash:
       serializedVersion: 2
-      Hash: ef53807d9fbed22c30620c4d7f72674a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ResolutionSettings
-  - hash:
-      serializedVersion: 2
       Hash: 1a680d9a08de79b0d2c779e78c9843b4
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: ef53807d9fbed22c30620c4d7f72674a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ResolutionSettings
   - hash:
       serializedVersion: 2
       Hash: c933b590b3badb5918fa01e73cd5cc0c
@@ -1036,6 +1067,12 @@ ScriptsOnlyBuild:
     className: SceneVariables
   - hash:
       serializedVersion: 2
+      Hash: 32e45e9321b32487564fbc9be7df51eb
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ProBuilderMesh
+  - hash:
+      serializedVersion: 2
       Hash: e88d71ef93aba4e7faf243430f6a10ce
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1078,6 +1115,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: e3e8664035357fc3cb2713a5c719e060
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColliderBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: 47ee34eb8b6021efa0289dbbb17a5a85
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1088,6 +1131,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: df79ccb4cd3f3f8a5449fcd589774b35
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PreferenceDictionary
   - hash:
       serializedVersion: 2
       Hash: ab3d19695db8289414a06e6d45fd6c8e
@@ -1252,6 +1301,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c9ea7fc6e584a91f99e24369a904c607
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: Entity
+  - hash:
+      serializedVersion: 2
       Hash: 1934495cba7cb293a316ba605edddb64
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1304,6 +1359,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: ab146b9b456a0ac8917d892a3f2e3f4b
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: TriggerBehaviour
   - hash:
       serializedVersion: 2
       Hash: 7fdd3ee28e9042c3ec83463d0bb3b230
@@ -1616,60 +1677,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: df79ccb4cd3f3f8a5449fcd589774b35
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: PreferenceDictionary
-  - hash:
-      serializedVersion: 2
-      Hash: 32e45e9321b32487564fbc9be7df51eb
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ProBuilderMesh
-  - hash:
-      serializedVersion: 2
-      Hash: e3e8664035357fc3cb2713a5c719e060
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ColliderBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: c9ea7fc6e584a91f99e24369a904c607
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: Entity
-  - hash:
-      serializedVersion: 2
-      Hash: 19c7094e1c1b151057c372890e57f46f
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: BezierShape
-  - hash:
-      serializedVersion: 2
-      Hash: bf16f3f7cc6924018428428f7664a0d0
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: PolyShape
-  - hash:
-      serializedVersion: 2
-      Hash: db79736741eab4b57f517a51185b9563
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder.Shapes
-    className: ProBuilderShape
-  - hash:
-      serializedVersion: 2
-      Hash: fddc1d0815370c41972670aaf78cbc9a
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ColorPalette
-  - hash:
-      serializedVersion: 2
-      Hash: ab146b9b456a0ac8917d892a3f2e3f4b
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: TriggerBehaviour
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1678,4 +1685,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    1.1/ProWoProjekt.exe
+    1.2/ProWoProjekt.exe

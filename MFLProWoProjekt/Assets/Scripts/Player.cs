@@ -15,17 +15,27 @@ public class Player : MonoBehaviour
     private float lastposition;
     [SerializeField] GameObject welle;
 
+    private Animator ani;
+    private CapsuleCollider coli;
+
     // Start is called before the first frame update
     void Start()
     {
         characterController = gameObject.GetComponent<CharacterController>();
         lastposition = gameObject.transform.position.x;
+        ani = gameObject.GetComponent<Animator>();
+        coli = gameObject.GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.transform.position = new(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+        ani.SetBool("trstart", GameManager.instance.start);
+        ani.SetBool("trjumping", GameManager.instance.jumping);
+        ani.SetBool("trduckedrun", GameManager.instance.ducked);
+        ani.SetBool("end", GameManager.instance.theend);
+
         // Move forward
         moveVector = Vector3.right * GameManager.instance.speed;
 
@@ -50,6 +60,10 @@ public class Player : MonoBehaviour
         //Jump Start
         if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
         {
+            coli.center = new(0, 0.9f, 0);
+            coli.height = 1.8f;
+            characterController.center = new(0, 0.9f, 0);
+            characterController.height = 1.8f;
             GameManager.instance.jumping = true;
             GameManager.instance.jumpposition = gameObject.transform.position;
             jumpVector = new Vector3(0, 4 * GameManager.instance.speed, 0);
@@ -66,12 +80,16 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start) && (!GameManager.instance.theend))
         {
             //Scale
-            gameObject.transform.localScale = new Vector3(5, 6, 1);
+            coli.height = 1.1f;
+            coli.center = new(0, 0.55f, 0);
+            characterController.height = 1.1f;
+            characterController.center = new(0, 0.55f, 0);
+            //gameObject.transform.localScale = new Vector3(5, 6, 1);
             //Duckposition, ducked
             GameManager.instance.duckposition = gameObject.transform.position;
             GameManager.instance.ducked = true;
             //Bewegen
-            gravityMovement.y -= 6 / Time.deltaTime;
+            //gravityMovement.y -= 6 / Time.deltaTime;
         }
         
         //Aufstehen Vorbereiten
@@ -82,7 +100,7 @@ public class Player : MonoBehaviour
             GameManager.instance.ducking = true;
 
             //Bewegen
-            gravityMovement.y += 6 / Time.deltaTime;
+            //gravityMovement.y += 6 / Time.deltaTime;
         }
         
         //finalMovement
@@ -103,7 +121,11 @@ public class Player : MonoBehaviour
         //Aufstehen
         if (GameManager.instance.ducking)
         {
-            gameObject.transform.localScale = new Vector3(5, 12, 1);
+            coli.center = new(0, 0.9f, 0);
+            coli.height = 1.8f;
+            characterController.center = new(0, 0.9f, 0);
+            characterController.height = 1.8f;
+
             GameManager.instance.ducking = false;
 
         }
