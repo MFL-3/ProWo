@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638776562824338449
+      ticks: 638777273793794907
     m_Hash: 1693707135
   m_LockFileStatus:
     m_FilePath: C:/Users/Michael Krol/Documents/GitHub/ProWo/MFLProWoProjekt/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638776562824493539
+      ticks: 638777273793894941
     m_Hash: 2417951184
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
