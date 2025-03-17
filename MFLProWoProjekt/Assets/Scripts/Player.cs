@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         }
 
         //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start) && (!GameManager.instance.ducked))
         {
             coli.center = new(0, 0.9f, 0);
             coli.height = 1.8f;
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
         }
         
         //Aufstehen Vorbereiten
-        if ((gameObject.transform.position.x >= GameManager.instance.duckposition.x + 35) && (GameManager.instance.ducked == true))
+        if ((gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
         {
             //ducked, ducking
             GameManager.instance.ducked = false;

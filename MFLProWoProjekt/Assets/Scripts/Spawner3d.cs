@@ -13,7 +13,7 @@ public class Spawner3d : MonoBehaviour
     public Vector3 spawnposition1 = new Vector3(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
     public Vector3 spawnposition3 = new Vector3(20, 0, 0);
-    //public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
+    public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
     public int nexttile1;
     public int nexttile2;
     public int nexttile3;
@@ -65,7 +65,7 @@ public class Spawner3d : MonoBehaviour
         prevprevtile2 = 1;
         prevprevtile3 = 1;
         Place();
-        //Instantiate(absperr, spawnposition4, absperr.transform.rotation);
+        Instantiate(absperr, spawnposition4, absperr.transform.rotation);
     }
 
     // Update is called once per frame
@@ -76,11 +76,11 @@ public class Spawner3d : MonoBehaviour
             Place();
         }
 
-        //if (player.transform.position.z - spawnposition4.z  >= 500)
-        //{
-            //spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
-            //Instantiate(absperr, spawnposition4, absperr.transform.rotation);
-        //}
+        if (player.transform.position.z - spawnposition4.z  >= 500)
+        {
+            spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
+            Instantiate(absperr, spawnposition4, absperr.transform.rotation);
+        } 
 
     }
 
@@ -111,7 +111,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, new(-20, 10, spawnposition1.z), tile2.transform.rotation);
+                    Instantiate(tile2, new(-30, 0, spawnposition1.z - 10), tile2.transform.rotation);
                     currenttile1 = nexttile1;
                     if (nexttile2 == 5)
                     {
@@ -128,7 +128,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 3:
-                    Instantiate(tile3, new(-20, 30, spawnposition1.z), tile3.transform.rotation);
+                    Instantiate(tile3, new(-30, 20, spawnposition1.z - 10), tile3.transform.rotation);
                     currenttile1 = nexttile1;
                     if (prevtile1 == 2)
                     {
@@ -191,7 +191,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, new(0, 10, spawnposition2.z), tile2.transform.rotation);
+                    Instantiate(tile2, new(-10, 0, spawnposition2.z - 10), tile2.transform.rotation);
                     currenttile2 = nexttile2;
 
                     if (currenttile1 == 5)
@@ -209,7 +209,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 3:
-                    Instantiate(tile3, new(0, 30, spawnposition2.z), tile3.transform.rotation);
+                    Instantiate(tile3, new(-10, 20, spawnposition2.z - 10), tile3.transform.rotation);
                     currenttile2 = nexttile2;
                     if (prevtile2 == 2)
                     {
@@ -273,7 +273,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, new(20, 10, spawnposition3.z), tile2.transform.rotation);
+                    Instantiate(tile2, new(10, 0, spawnposition3.z - 10), tile2.transform.rotation);
                     currenttile3 = nexttile3;
                     
                     if (treppe3)
@@ -290,7 +290,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
                 case 3:
-                    Instantiate(tile3, new(20, 30, spawnposition3.z), tile3.transform.rotation);
+                    Instantiate(tile3, new(10, 20, spawnposition3.z - 10), tile3.transform.rotation);
                     currenttile3 = nexttile3;
                     if (prevtile3 == 2)
                     {

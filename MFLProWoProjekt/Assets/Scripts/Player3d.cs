@@ -13,17 +13,26 @@ public class Player3d : MonoBehaviour
     private float currentGravity = 1f;
     private float lastposition;
 
+    private Animator ani;
+    private CapsuleCollider coli;
+
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = gameObject.GetComponent<CharacterController>();
         lastposition = gameObject.transform.position.x;
+        ani = gameObject.GetComponent<Animator>();
+        coli = gameObject.GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //ani.SetBool("trstart", GameManager3d.instance.start);
+        ani.SetBool("trjumping", GameManager3d.instance.jumping);
+        ani.SetBool("trduckedrun", GameManager3d.instance.ducked);
+        //ani.SetBool("end", GameManager3d.instance.theend);
 
         // Move forward
         moveVector = Vector3.forward * GameManager3d.instance.speed;
@@ -50,7 +59,7 @@ public class Player3d : MonoBehaviour
         spurwechsel = Vector3.right * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * 3f;
 
         //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.ducked))
         {
             GameManager3d.instance.jumping = true;
             GameManager3d.instance.jumpposition = gameObject.transform.position;
@@ -68,12 +77,17 @@ public class Player3d : MonoBehaviour
         if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded)
         {
             //Scale
-            gameObject.transform.localScale = new Vector3(5, 6, 1);
+            coli.height = 1.1f;
+            coli.center = new(0, 0.55f, 0);
+            characterController.height = 1.1f;
+            characterController.center = new(0, 0.55f, 0);
+
+            //gameObject.transform.localScale = new Vector3(5, 6, 1);
             //Duckposition, ducked
             GameManager3d.instance.duckposition = gameObject.transform.position;
             GameManager3d.instance.ducked = true;
             //Bewegen
-            gravityMovement.y -= 6 / Time.deltaTime;
+            //gravityMovement.y -= 6 / Time.deltaTime;
         }
 
         //Aufstehen Vorbereiten
@@ -84,7 +98,7 @@ public class Player3d : MonoBehaviour
             GameManager3d.instance.ducking = true;
 
             //Bewegen
-            gravityMovement.y += 6 / Time.deltaTime;
+            //gravityMovement.y += 6 / Time.deltaTime;
         }
 
         //finalMovement
@@ -96,7 +110,11 @@ public class Player3d : MonoBehaviour
         //Aufstehen
         if (GameManager3d.instance.ducking)
         {
-            gameObject.transform.localScale = new Vector3(5, 12, 1);
+            coli.center = new(0, 0.9f, 0);
+            coli.height = 1.8f;
+            characterController.center = new(0, 0.9f, 0);
+            characterController.height = 1.8f;
+            //gameObject.transform.localScale = new Vector3(5, 12, 1);
             GameManager3d.instance.ducking = false;
 
         }
