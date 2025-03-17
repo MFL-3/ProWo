@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Cameramovement
+    - Cameramovement3D2
     - Cameramovement3d
     - GO2DText
     - GO3DText
@@ -19,12 +20,11 @@ ScriptsOnlyBuild:
     - ScoreText3d
     - Spawner3d
     - TileSpawner
+    - Transparentchange
     - Twodopen
-    - cameramovement3D2
-    - transparentchange
-    - wele2d
-    - wele3D
-    - welle3ddeath
+    - Wele2d
+    - Wele3D
+    - Welle3ddeath
     Unity.ProBuilder.dll:
     - UnityEngine.ProBuilder.ProBuilderMesh
     - UnityEngine.ProBuilder.Shapes.ProBuilderShape
@@ -517,7 +517,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: bda5d3bd5cc3cb544f7e213d83a640e1
+      Hash: 9c89a7cf1c026f29c4559ba50469ef5f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager3d
@@ -565,10 +565,10 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: a7b522145936885e209b70f33884f718
+      Hash: 7067bbdd6d69f511d80141eb343c33fc
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: wele2d
+    className: Wele2d
   - hash:
       serializedVersion: 2
       Hash: 24afa487de9fc1e6e46de44b480e2130
@@ -601,7 +601,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9ce437f74a3505e773bce60e5cfa475f
+      Hash: e077b6080d9b7e8fe1f9183d2270d533
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Spawner3d
@@ -871,10 +871,10 @@ ScriptsOnlyBuild:
     className: UnityOnControllerColliderHitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8b845476fa0c48faf2d6e9611ad50b07
+      Hash: 967617af56b0856492da2912cef64d93
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: cameramovement3D2
+    className: Cameramovement3D2
   - hash:
       serializedVersion: 2
       Hash: 960935b102b3064f4b924de16426e340
@@ -1219,10 +1219,10 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 12fdda8d71731f3c4c7f1e226a301aee
+      Hash: db4861a609f00829730a1b692ba0a323
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: welle3ddeath
+    className: Welle3ddeath
   - hash:
       serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
@@ -1339,7 +1339,7 @@ ScriptsOnlyBuild:
     className: Entity
   - hash:
       serializedVersion: 2
-      Hash: 1934495cba7cb293a316ba605edddb64
+      Hash: 835b92335b9809ed8f5caca77e16e075
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1543,10 +1543,10 @@ ScriptsOnlyBuild:
     className: ScoreText3d
   - hash:
       serializedVersion: 2
-      Hash: 8f23b9a36630cdb2713e9f50bc65f993
+      Hash: 5f50613b0121e6af22db50545ace902f
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: wele3D
+    className: Wele3D
   - hash:
       serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
@@ -1657,10 +1657,10 @@ ScriptsOnlyBuild:
     className: HighScoreText
   - hash:
       serializedVersion: 2
-      Hash: fe72a6b0db77a97aa4b9515ffc4414c1
+      Hash: cad7aba1b87ba86363125d86cf82253d
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: transparentchange
+    className: Transparentchange
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
