@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class Spawner3d : MonoBehaviour
 {
-    [SerializeField] GameObject tile1;
-    [SerializeField] GameObject tile2;
-    [SerializeField] GameObject tile3;
-    [SerializeField] GameObject tile5;
-    [SerializeField] GameObject absperr;
-    GameObject player;
-    public Vector3 spawnposition1 = new Vector3(-20, 0, 0);
+    public Vector3 spawnposition1 = new(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
-    public Vector3 spawnposition3 = new Vector3(20, 0, 0);
-    public Vector3 spawnposition4 = new Vector3(-30, 70, 980);
+    public Vector3 spawnposition3 = new(20, 0, 0);
+    public Vector3 spawnposition4 = new(-30, 70, 980);
+
     public int nexttile1;
     public int nexttile2;
     public int nexttile3;
+
     public int prevtile1;
     public int prevtile2;
     public int prevtile3;
+
     public int prevprevtile1;
     public int prevprevtile2;
     public int prevprevtile3;
+
     public int currenttile1;
     public int currenttile2;
     public int currenttile3;
@@ -31,10 +29,20 @@ public class Spawner3d : MonoBehaviour
     private bool treppe2 = false;
     private bool treppe3 = false;
 
+    [SerializeField] GameObject tile1;
+    [SerializeField] GameObject tile2;
+    [SerializeField] GameObject tile3;
+    [SerializeField] GameObject tile5;
+
+    [SerializeField] GameObject absperr;
+
+    GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager3d.instance.player3d;
+        //ebene flaeche am start
         for (int i = 0; i < 9; i++)
         {
             Instantiate(tile1, spawnposition1, tile1.transform.rotation);
@@ -46,6 +54,7 @@ public class Spawner3d : MonoBehaviour
         }
         nexttile1 = Random.Range(1, 6);
         nexttile2 = Random.Range(1, 6);
+        //keine 3 Waende (tile5) nebeneinander
         if (nexttile1 == 5 && nexttile2 == 5)
         {
             nexttile3 = Random.Range(1, 5);
@@ -76,6 +85,7 @@ public class Spawner3d : MonoBehaviour
             Place();
         }
 
+        //absperrungen placen
         if (player.transform.position.z - spawnposition4.z  >= 500)
         {
             spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
@@ -101,6 +111,7 @@ public class Spawner3d : MonoBehaviour
                         treppe1 = false;
                         nexttile1 = 1;
                     }
+                    //abfrage anderer Stufen, damit keine Fallen entstehen
                     else if (nexttile2 == 5)
                     {
                         nexttile1 = Random.Range(1, 5);
@@ -113,6 +124,7 @@ public class Spawner3d : MonoBehaviour
                 case 2:
                     Instantiate(tile2, new(-30, 0, spawnposition1.z - 10), tile2.transform.rotation);
                     currenttile1 = nexttile1;
+                    //abfrage anderer Stufen, damit keine Fallen entstehen
                     if (nexttile2 == 5)
                     {
                         nexttile1 = Random.Range(1, 5);

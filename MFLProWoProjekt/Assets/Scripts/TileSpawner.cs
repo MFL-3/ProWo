@@ -7,8 +7,9 @@ public class TileSpawner : MonoBehaviour
     public GameObject tile1;
     public GameObject tile2;
     public GameObject tile3;
-    GameObject player;
-    public Vector3 spawnposition = new Vector3(0, -15, 0);
+
+    public Vector3 spawnposition = new(0, -15, 0);
+
     public int nexttile;
     public int prevtile;
     public int prevprevtile;
@@ -17,15 +18,19 @@ public class TileSpawner : MonoBehaviour
     private bool treppe = false;
     private bool wastreppe = false;
 
+    GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager.instance.player;
+        //ebene Flaeche als start
         for (int i = 0; i < 9; i++)
         {
             Instantiate(tile1, spawnposition, tile1.transform.rotation);
             spawnposition = new Vector3(spawnposition.x + 20, spawnposition.y, 0);   
         }
+
         nexttile = Random.Range(1, 5);
         prevtile = 1;
         currenttile = 1;
@@ -47,6 +52,7 @@ public class TileSpawner : MonoBehaviour
     {
         for (int i = 0; i< 100; i++)
         {
+            //vorherige tiles aktualisieren
             prevprevtile = prevtile;
             prevtile = currenttile;
             switch (nexttile)
@@ -58,6 +64,7 @@ public class TileSpawner : MonoBehaviour
                     {
                         wastreppe = false;
                     }
+                    //treppe aus -> wastreppe an, kein Abgrund nach treppe
                     if (treppe)
                     {
                         treppe = false;
@@ -80,6 +87,7 @@ public class TileSpawner : MonoBehaviour
                     break;
                 case 3:
                     Instantiate(tile3, spawnposition, tile3.transform.rotation);
+                    //treppean, wenn davor tile2 oder wastreppe
                     if(currenttile == 2)
                     {
                         treppe = true;
@@ -104,7 +112,8 @@ public class TileSpawner : MonoBehaviour
                     nexttile = 1;
                     break;
             }
-            spawnposition = new Vector3(spawnposition.x + 20, -15, 0);
+            //spawnposition aktualisieren
+            spawnposition = new(spawnposition.x + 20, -15, 0);
         }
     }
 }

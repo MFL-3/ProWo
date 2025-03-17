@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class welle3ddeath : MonoBehaviour
+public class Welle3ddeath : MonoBehaviour
 {
     // Update is called once per frame
     void Update()

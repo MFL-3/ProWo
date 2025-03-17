@@ -11,8 +11,8 @@ public class GO2DText : MonoBehaviour
 
     private TextMeshProUGUI textScore;
     private TextMeshProUGUI textHiScore;
-
     private int score;
+
     public static int highScore = 0;
     // Start is called before the first frame update
     void Start()

@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class ScoreText : MonoBehaviour
 {
     public static int score;
+
     private TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {

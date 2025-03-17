@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cameramovement3d : MonoBehaviour
 {
     [SerializeField] Camera cam;
+
     // Update is called once per frame
     void Update()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wele2d : MonoBehaviour
+public class Wele2d : MonoBehaviour
 {
     void Update()
     {
@@ -25,7 +25,6 @@ public class wele2d : MonoBehaviour
         }
 
     }
-
     void Movement(float speed)
     {
         gameObject.transform.position += speed * Time.deltaTime * Vector3.right;

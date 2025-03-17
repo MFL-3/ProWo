@@ -84,23 +84,21 @@ public class Player : MonoBehaviour
             coli.center = new(0, 0.55f, 0);
             characterController.height = 1.1f;
             characterController.center = new(0, 0.55f, 0);
-            //gameObject.transform.localScale = new Vector3(5, 6, 1);
+
             //Duckposition, ducked
             GameManager.instance.duckposition = gameObject.transform.position;
             GameManager.instance.ducked = true;
-            //Bewegen
-            //gravityMovement.y -= 6 / Time.deltaTime;
+
         }
         
-        //Aufstehen Vorbereiten
+        //Aufstehen
         if ((gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
         {
-            //ducked, ducking
             GameManager.instance.ducked = false;
-            GameManager.instance.ducking = true;
-
-            //Bewegen
-            //gravityMovement.y += 6 / Time.deltaTime;
+            coli.center = new(0, 0.9f, 0);
+            coli.height = 1.8f;
+            characterController.center = new(0, 0.9f, 0);
+            characterController.height = 1.8f;
         }
         
         //finalMovement
@@ -117,19 +115,6 @@ public class Player : MonoBehaviour
             characterController.Move(gravityMovement * Time.deltaTime);
         }
 
-
-        //Aufstehen
-        if (GameManager.instance.ducking)
-        {
-            coli.center = new(0, 0.9f, 0);
-            coli.height = 1.8f;
-            characterController.center = new(0, 0.9f, 0);
-            characterController.height = 1.8f;
-
-            GameManager.instance.ducking = false;
-
-        }
-
         // End Jumping
         if (GameManager.instance.jumping && characterController.isGrounded)
         {
@@ -137,6 +122,7 @@ public class Player : MonoBehaviour
             currentGravity = 1;
         }
 
+        //Tile2 Colission
         if(lastposition >= gameObject.transform.position.x && (!GameManager.instance.start))
         {
             GameManager.instance.theend = true;

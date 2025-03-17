@@ -59,7 +59,7 @@ public class Player3d : MonoBehaviour
         }
 
         //Spuren wechseln
-        spurwechsel = Vector3.right * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * 3f;
+        spurwechsel = 3f * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Vector3.right;
 
         //Jump Start
         if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.ducked) && (!GameManager3d.instance.start))
@@ -85,23 +85,19 @@ public class Player3d : MonoBehaviour
             characterController.height = 1.1f;
             characterController.center = new(0, 0.55f, 0);
 
-            //gameObject.transform.localScale = new Vector3(5, 6, 1);
             //Duckposition, ducked
             GameManager3d.instance.duckposition = gameObject.transform.position;
             GameManager3d.instance.ducked = true;
-            //Bewegen
-            //gravityMovement.y -= 6 / Time.deltaTime;
         }
 
-        //Aufstehen Vorbereiten
+        //Aufstehen
         if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked == true))
         {
-            //ducked, ducking
             GameManager3d.instance.ducked = false;
-            GameManager3d.instance.ducking = true;
-
-            //Bewegen
-            //gravityMovement.y += 6 / Time.deltaTime;
+            coli.center = new(0, 0.9f, 0);
+            coli.height = 1.8f;
+            characterController.center = new(0, 0.9f, 0);
+            characterController.height = 1.8f;
         }
 
         //finalMovement
@@ -111,19 +107,6 @@ public class Player3d : MonoBehaviour
         if ((!GameManager3d.instance.start) && (!GameManager3d.instance.theend))
         {
             characterController.Move(finalMovement * Time.deltaTime);
-        }
-
-
-        //Aufstehen
-        if (GameManager3d.instance.ducking)
-        {
-            coli.center = new(0, 0.9f, 0);
-            coli.height = 1.8f;
-            characterController.center = new(0, 0.9f, 0);
-            characterController.height = 1.8f;
-            //gameObject.transform.localScale = new Vector3(5, 12, 1);
-            GameManager3d.instance.ducking = false;
-
         }
 
         // End Jumping

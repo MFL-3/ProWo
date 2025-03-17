@@ -6,7 +6,9 @@ using UnityEngine;
 public class HighScoreText : MonoBehaviour
 {
     public static int highScore;
+
     private TextMeshProUGUI text;
+
     // Start is called before the first frame update
     void Start()
     {
