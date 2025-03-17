@@ -3,48 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\spawner3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|c:\\users\\michael krol\\documents\\github\\prowo\\mflprowoprojekt\\assets\\scripts\\player3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\player3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|c:\\users\\michael krol\\documents\\github\\prowo\\mflprowoprojekt\\assets\\scripts\\welle3ddeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\welle3ddeath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\gamemanager3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\cameramovement3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramovement3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\tilespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\hinderniss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hinderniss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\spawner3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\wele2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wele2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\hinderniss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hinderniss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|c:\\users\\michael krol\\documents\\github\\prowo\\mflprowoprojekt\\assets\\scripts\\cameramovement 3d 2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramovement 3d 2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\cameramovement3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramovement3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\wele3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wele3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\hinderniss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hinderniss1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\tilespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tilespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\hinderniss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hinderniss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D32C43-CD95-14D6-B6AB-5DBAE66FE136}|Assembly-CSharp.csproj|C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\assets\\scripts\\resolutionsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,8 +110,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "welle3ddeath.cs",
+              "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\welle3ddeath.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\welle3ddeath.cs",
+              "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\welle3ddeath.cs",
+              "RelativeToolTip": "Assets\\Scripts\\welle3ddeath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:41:12.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "cameramovement 3D 2.cs",
+              "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\cameramovement 3D 2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\cameramovement 3D 2.cs",
+              "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\cameramovement 3D 2.cs",
+              "RelativeToolTip": "Assets\\Scripts\\cameramovement 3D 2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T14:32:45.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "wele3D.cs",
+              "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\wele3D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\wele3D.cs",
+              "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\wele3D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\wele3D.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T12:08:20.208Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 7,
@@ -108,13 +158,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\wele2d.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\wele2d.cs",
               "RelativeToolTip": "Assets\\Scripts\\wele2d.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T15:27:51.527Z"
+              "WhenOpened": "2025-03-14T15:27:51.527Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "HighScoreText.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\HighScoreText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HighScoreText.cs",
@@ -126,31 +177,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Hinderniss1.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Hinderniss1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hinderniss1.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Hinderniss1.cs",
               "RelativeToolTip": "Assets\\Scripts\\Hinderniss1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T08:00:50.304Z"
+              "WhenOpened": "2025-03-11T08:00:50.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Cameramovement3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Cameramovement3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cameramovement3d.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Cameramovement3d.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cameramovement3d.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T19:06:28.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Spawner3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Spawner3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner3d.cs",
@@ -163,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "transparentchange.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\transparentchange.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\transparentchange.cs",
@@ -175,19 +227,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAwBgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAYwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T18:25:44.571Z"
+              "WhenOpened": "2025-01-26T18:25:44.571Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "HighScoreText3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\HighScoreText3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HighScoreText3d.cs",
@@ -199,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "GO3DText.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GO3DText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GO3DText.cs",
@@ -211,20 +264,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAYwF8AAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAYwJ0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T07:31:30.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "ScoreText3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\ScoreText3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreText3d.cs",
@@ -236,20 +289,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Player3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player3d.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Player3d.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player3d.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwD4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAYwJQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T14:02:50.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "GO2DText.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GO2DText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GO2DText.cs",
@@ -261,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Twodopen.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Twodopen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Twodopen.cs",
@@ -273,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "ScoreText.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\ScoreText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreText.cs",
@@ -285,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ResolutionSettings.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\ResolutionSettings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ResolutionSettings.cs",
@@ -297,19 +350,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "GameManager3d.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GameManager3d.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager3d.cs",
               "ToolTip": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\GameManager3d.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager3d.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwEAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T13:15:32.718Z"
+              "WhenOpened": "2025-03-10T13:15:32.718Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Hinderniss.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Hinderniss.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Hinderniss.cs",
@@ -321,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MenuHiScore.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\MenuHiScore.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuHiScore.cs",
@@ -333,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "HindernissDestroyer.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\HindernissDestroyer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HindernissDestroyer.cs",
@@ -345,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Cameramovement.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\Cameramovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cameramovement.cs",
@@ -357,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "TileSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Michael Krol\\Documents\\GitHub\\ProWo\\MFLProWoProjekt\\Assets\\Scripts\\TileSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TileSpawner.cs",

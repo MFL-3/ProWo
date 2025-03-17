@@ -16,6 +16,6 @@ public class Hinderniss1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);        
+        GameManager3d.instance.theend = true;       
     }
 }

@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         }
 
         // Ducken
-        if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start) && (!GameManager.instance.theend))
+        if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start))
         {
             //Scale
             coli.height = 1.1f;

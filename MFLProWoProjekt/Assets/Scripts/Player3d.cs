@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Player3d : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Player3d : MonoBehaviour
     private Animator ani;
     private CapsuleCollider coli;
 
+    [SerializeField] GameObject welle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +32,10 @@ public class Player3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ani.SetBool("trstart", GameManager3d.instance.start);
+        ani.SetBool("trstart", GameManager3d.instance.start);
         ani.SetBool("trjumping", GameManager3d.instance.jumping);
         ani.SetBool("trduckedrun", GameManager3d.instance.ducked);
-        //ani.SetBool("end", GameManager3d.instance.theend);
+        ani.SetBool("end", GameManager3d.instance.theend);
 
         // Move forward
         moveVector = Vector3.forward * GameManager3d.instance.speed;
@@ -59,7 +62,7 @@ public class Player3d : MonoBehaviour
         spurwechsel = Vector3.right * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * 3f;
 
         //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.ducked))
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.ducked) && (!GameManager3d.instance.start))
         {
             GameManager3d.instance.jumping = true;
             GameManager3d.instance.jumpposition = gameObject.transform.position;
@@ -74,7 +77,7 @@ public class Player3d : MonoBehaviour
         }
 
         // Ducken
-        if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded)
+        if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
         {
             //Scale
             coli.height = 1.1f;
@@ -105,7 +108,11 @@ public class Player3d : MonoBehaviour
         Vector3 finalMovement = moveVector + gravityMovement + jumpVector + spurwechsel;
 
         //Move
-        characterController.Move(finalMovement * Time.deltaTime);
+        if ((!GameManager3d.instance.start) && (!GameManager3d.instance.theend))
+        {
+            characterController.Move(finalMovement * Time.deltaTime);
+        }
+
 
         //Aufstehen
         if (GameManager3d.instance.ducking)
@@ -127,9 +134,9 @@ public class Player3d : MonoBehaviour
         }
 
         // Tile2 Collision
-        if (lastposition == gameObject.transform.position.z)
+        if (lastposition == gameObject.transform.position.z && (!GameManager3d.instance.start))
         {
-            Destroy(gameObject);
+            GameManager3d.instance.theend = true;
         }
         else
         {
@@ -138,6 +145,12 @@ public class Player3d : MonoBehaviour
 
         // Runterfallen
         if (transform.position.y <= -40)
+        {
+            Destroy(gameObject);
+        }
+
+        //Sterben
+        if (gameObject.transform.position.z+20 <= welle.transform.position.z && GameManager3d.instance.theend)
         {
             Destroy(gameObject);
         }
