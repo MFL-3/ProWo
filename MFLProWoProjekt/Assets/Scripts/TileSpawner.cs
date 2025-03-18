@@ -50,6 +50,7 @@ public class TileSpawner : MonoBehaviour
 
     void Place()
     {
+        //100 tiles placen
         for (int i = 0; i< 100; i++)
         {
             //vorherige tiles aktualisieren
