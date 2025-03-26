@@ -88,7 +88,7 @@ public class TileSpawner : MonoBehaviour
                     break;
                 case 3:
                     Instantiate(tile3, spawnposition, tile3.transform.rotation);
-                    //treppean, wenn davor tile2 oder wastreppe
+                    //treppe an, wenn davor tile2 oder wastreppe
                     if(currenttile == 2)
                     {
                         treppe = true;

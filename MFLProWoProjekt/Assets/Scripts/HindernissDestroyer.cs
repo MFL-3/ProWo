@@ -8,7 +8,7 @@ public class HindernissDestroyer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Tile"))
         {
-            Destroy(other.gameObject);
+            GameManager.instance.theend = true;
         }
     }
 }

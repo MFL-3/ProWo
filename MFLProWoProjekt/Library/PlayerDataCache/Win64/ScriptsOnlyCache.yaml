@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - GameManager3d
     - HighScoreText
     - HighScoreText3d
+    - Hinderniss
     - Hinderniss1
     - HindernissDestroyer
     - MenuHiScore
@@ -166,6 +167,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5758}
     - Class: 114
       Script: {instanceID: 5892}
+    - Class: 114
+      Script: {instanceID: 5930}
     - Class: 114
       Script: {instanceID: 6068}
     - Class: 114
@@ -426,13 +429,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -471,6 +482,8 @@ ScriptsOnlyBuild:
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1723,4 +1736,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    2.0/ProWoProjekt.exe
+    2.2/ProWoProjekt.exe

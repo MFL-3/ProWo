@@ -26,7 +26,6 @@ public class GameManager3d : MonoBehaviour
 
     private float timer = 15;
     private float score = 0;
-    private int currentframe = 0;
 
     [SerializeField] GameObject block;
 
@@ -59,15 +58,8 @@ public class GameManager3d : MonoBehaviour
             //Ab 15 Sekunden 10 mal pro sekunde Geschwindigkeit erhoehen
             if (timer <= 0)
             {
-                if (currentframe == 0)
-                {
-                    speed += 2 * Time.deltaTime;
-                }
-                currentframe += 1;
-                if (currentframe == 10)
-                {
-                    currentframe = 0;
-                }
+                timer = 1;
+                speed += 0.1f;
             }
 
             gravity = 5 * speed;
