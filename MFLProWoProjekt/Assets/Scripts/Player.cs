@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         if ((!GameManager.instance.ducked && GameManager.instance.jumping ) || (gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
         {
             GameManager.instance.ducked = false;
-            coli.center = new(0, 0.9f, 0);
+            coli.center = new(0, 1, 0);
             coli.height = 1.8f;
             characterController.center = new(0, 0.9f, 0);
             characterController.height = 1.8f;

@@ -5,11 +5,8 @@ using UnityEngine;
 
 public class Hinderniss : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            GameManager.instance.theend = true;
-        }
+        GameManager.instance.theend = true;
     }
 }
