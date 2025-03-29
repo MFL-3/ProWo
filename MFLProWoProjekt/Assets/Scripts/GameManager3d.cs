@@ -55,7 +55,7 @@ public class GameManager3d : MonoBehaviour
             {
                 highScore = scorereal;
             }
-            //Ab 15 Sekunden 10 mal pro sekunde Geschwindigkeit erhoehen
+            //Ab 15 Sekunden 1 mal pro sekunde Geschwindigkeit erhoehen
             if (timer <= 0)
             {
                 timer = 1;
