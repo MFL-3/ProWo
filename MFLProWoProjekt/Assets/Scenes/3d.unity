@@ -231,7 +231,7 @@ CharacterController:
   m_Height: 1.8
   m_Radius: 0.2
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
@@ -252,7 +252,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.2
   m_Height: 1.8
@@ -647,11 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91671611aa3b07f4598d0fd9b029f544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile1: {fileID: 6969972457552033064, guid: 95c5473a080e49e4995708cbd69e4dd9, type: 3}
-  tile2: {fileID: 4244679112657525125, guid: 938a82b7eeecc0c4283e9b4631fea866, type: 3}
-  tile3: {fileID: 4244679112657525125, guid: 0415011fe028878479bb4a217d7763d6, type: 3}
-  tile5: {fileID: 7678530532618101374, guid: 20113d96d826a0148b3fc2e635c03555, type: 3}
-  absperr: {fileID: 8754760840645171786, guid: 40ef3394ae8a01d46af622e7e51e2d72, type: 3}
   spawnposition1: {x: 0, y: -20, z: 0}
   spawnposition2: {x: 0, y: 0, z: 0}
   spawnposition3: {x: 0, y: 20, z: 0}
@@ -668,6 +663,11 @@ MonoBehaviour:
   currenttile1: 0
   currenttile2: 0
   currenttile3: 0
+  tile1: {fileID: 6969972457552033064, guid: 95c5473a080e49e4995708cbd69e4dd9, type: 3}
+  tile2: {fileID: 4244679112657525125, guid: 938a82b7eeecc0c4283e9b4631fea866, type: 3}
+  tile3: {fileID: 4244679112657525125, guid: 0415011fe028878479bb4a217d7763d6, type: 3}
+  tile5: {fileID: 7678530532618101374, guid: 20113d96d826a0148b3fc2e635c03555, type: 3}
+  absperr: {fileID: 8754760840645171786, guid: 40ef3394ae8a01d46af622e7e51e2d72, type: 3}
 --- !u!1 &770794237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5054464250899849529, guid: b3dfc46eaca19fb49a034a14f62fa8ae, type: 3}
@@ -1040,8 +1040,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   ducked: 0
-  ducking: 0
   jumping: 0
+  theend: 0
+  start: 1
   duckposition: {x: 0, y: 0, z: 0}
   jumpposition: {x: 0, y: 0, z: 0}
   player3d: {fileID: 18121703}
@@ -1049,8 +1050,6 @@ MonoBehaviour:
   gravity: 80
   scorereal: 0
   highScore: 0
-  theend: 0
-  start: 1
   block: {fileID: 5054464250899849529, guid: b3dfc46eaca19fb49a034a14f62fa8ae, type: 3}
 --- !u!1 &1480851291
 GameObject:
@@ -1297,7 +1296,7 @@ Transform:
   m_GameObject: {fileID: 1907522469}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 119, y: 51, z: 35}
+  m_LocalPosition: {x: 119, y: 52, z: 35}
   m_LocalScale: {x: 1, y: 0.9348187, z: 1.1054187}
   m_ConstrainProportionsScale: 0
   m_Children: []

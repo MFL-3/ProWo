@@ -65,6 +65,10 @@ public class Player3d : MonoBehaviour
         if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.start))
         {
             GameManager3d.instance.jumping = true;
+            if (GameManager3d.instance.ducked)
+            {
+                GameManager3d.instance.ducked = false;
+            }
             GameManager3d.instance.jumpposition = gameObject.transform.position;
             jumpVector = new Vector3(0, 4 * GameManager3d.instance.speed, 0);
         }
@@ -107,6 +111,11 @@ public class Player3d : MonoBehaviour
         if ((!GameManager3d.instance.start) && (!GameManager3d.instance.theend))
         {
             characterController.Move(finalMovement * Time.deltaTime);
+        }
+        else
+        {
+            GameManager3d.instance.jumping = false;
+            characterController.Move(gravityMovement * Time.deltaTime);
         }
 
         // End Jumping
