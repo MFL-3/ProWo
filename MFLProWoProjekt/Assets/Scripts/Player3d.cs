@@ -62,7 +62,7 @@ public class Player3d : MonoBehaviour
         spurwechsel = 3f * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Vector3.right;
 
         //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.ducked) && (!GameManager3d.instance.start))
+        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.start))
         {
             GameManager3d.instance.jumping = true;
             GameManager3d.instance.jumpposition = gameObject.transform.position;
