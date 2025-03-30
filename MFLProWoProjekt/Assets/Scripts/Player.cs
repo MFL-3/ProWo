@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject welle;
 
     private Animator ani;
-    private CapsuleCollider coli;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,6 @@ public class Player : MonoBehaviour
         characterController = gameObject.GetComponent<CharacterController>();
         lastposition = gameObject.transform.position.x;
         ani = gameObject.GetComponent<Animator>();
-        coli = gameObject.GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -38,6 +36,7 @@ public class Player : MonoBehaviour
 
         // Move forward
         moveVector = Vector3.right * GameManager.instance.speed;
+
 
         //Apply Gravity if not jumping
         if (GameManager.instance.jumping)
@@ -56,18 +55,28 @@ public class Player : MonoBehaviour
                 currentGravity = 1;
             }
         }
+        /*if (GameManager.instance.jumping)
+        {
+            gravityMovement = Vector3.zero;
+        }
+        else if (!characterController.isGrounded)
+        {
+            gravityMovement = new Vector3(0, -2 * GameManager.instance.speed, 0);
+        }
+        else
+        {
+            gravityMovement = Vector3.down;
+        }*/
 
         //Jump Start
         if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
         {
-            coli.center = new(0, 0.9f, 0);
-            coli.height = 1.8f;
-            characterController.center = new(0, 0.9f, 0);
-            characterController.height = 1.8f;
             GameManager.instance.jumping = true;
-            if(GameManager.instance.ducked)
+            if (GameManager.instance.ducked)
             {
                 GameManager.instance.ducked = false;
+                characterController.center = new(0, 0.9f, 0);
+                characterController.height = 1.8f;
             }
             GameManager.instance.jumpposition = gameObject.transform.position;
             jumpVector = new Vector3(0, 4 * GameManager.instance.speed, 0);
@@ -84,8 +93,6 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start))
         {
             //Scale
-            coli.height = 1.1f;
-            coli.center = new(0, 0.55f, 0);
             characterController.height = 1.1f;
             characterController.center = new(0, 0.55f, 0);
 
@@ -99,8 +106,6 @@ public class Player : MonoBehaviour
         if ((!GameManager.instance.ducked && GameManager.instance.jumping ) || (gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
         {
             GameManager.instance.ducked = false;
-            coli.center = new(0, 1, 0);
-            coli.height = 1.8f;
             characterController.center = new(0, 0.9f, 0);
             characterController.height = 1.8f;
         }
@@ -127,8 +132,9 @@ public class Player : MonoBehaviour
         }
 
         //Tile2 Colission
-        if(lastposition >= gameObject.transform.position.x && (!GameManager.instance.start))
+        if(lastposition >= gameObject.transform.position.x && (!GameManager.instance.start) && (!GameManager.instance.theend))
         {
+            Debug.Log("tile 2");
             GameManager.instance.theend = true;
         }
         else
@@ -139,12 +145,14 @@ public class Player : MonoBehaviour
         // Runterfallen
         if (transform.position.y <= -40)
         {
+            Debug.Log("Abgrund");
             GameManager.instance.theend = true;
         }
 
         //Sterben
         if (gameObject.transform.position.x <= welle.transform.position.x + 10)
         {
+            Debug.Log("Welle");
             Destroy(gameObject);
         }
 

@@ -15,7 +15,6 @@ public class Player3d : MonoBehaviour
     private float lastposition;
 
     private Animator ani;
-    private CapsuleCollider coli;
 
     [SerializeField] GameObject welle;
 
@@ -26,7 +25,6 @@ public class Player3d : MonoBehaviour
         characterController = gameObject.GetComponent<CharacterController>();
         lastposition = gameObject.transform.position.x;
         ani = gameObject.GetComponent<Animator>();
-        coli = gameObject.GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -57,6 +55,18 @@ public class Player3d : MonoBehaviour
                 currentGravity = 1;
             }
         }
+        /*if (GameManager3d.instance.jumping)
+        {
+            gravityMovement = Vector3.zero;
+        }
+        else if (!characterController.isGrounded)
+        {
+            gravityMovement = new Vector3(0, -2 * GameManager3d.instance.speed, 0);
+        }
+        else
+        {
+            gravityMovement = Vector3.down;
+        }*/
 
         //Spuren wechseln
         spurwechsel = 3f * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Vector3.right;
@@ -68,6 +78,8 @@ public class Player3d : MonoBehaviour
             if (GameManager3d.instance.ducked)
             {
                 GameManager3d.instance.ducked = false;
+                characterController.center = new(0, 0.9f, 0);
+                characterController.height = 1.8f;
             }
             GameManager3d.instance.jumpposition = gameObject.transform.position;
             jumpVector = new Vector3(0, 4 * GameManager3d.instance.speed, 0);
@@ -84,8 +96,6 @@ public class Player3d : MonoBehaviour
         if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
         {
             //Scale
-            coli.height = 1.1f;
-            coli.center = new(0, 0.55f, 0);
             characterController.height = 1.1f;
             characterController.center = new(0, 0.55f, 0);
 
@@ -98,8 +108,6 @@ public class Player3d : MonoBehaviour
         if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked == true))
         {
             GameManager3d.instance.ducked = false;
-            coli.center = new(0, 0.9f, 0);
-            coli.height = 1.8f;
             characterController.center = new(0, 0.9f, 0);
             characterController.height = 1.8f;
         }
@@ -115,7 +123,7 @@ public class Player3d : MonoBehaviour
         else
         {
             GameManager3d.instance.jumping = false;
-            characterController.Move(gravityMovement * Time.deltaTime);
+            characterController.Move(2 * Time.deltaTime * gravityMovement);
         }
 
         // End Jumping
@@ -142,7 +150,7 @@ public class Player3d : MonoBehaviour
         }
 
         //Sterben
-        if (gameObject.transform.position.z+20 <= welle.transform.position.z && GameManager3d.instance.theend)
+        if (gameObject.transform.position.z + 20 <= welle.transform.position.z && GameManager3d.instance.theend)
         {
             Destroy(gameObject);
         }

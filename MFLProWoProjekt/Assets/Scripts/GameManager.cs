@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
             if (timer <= 0)
             {
                 timer = 1;
-                speed += 0.1f;
+                speed += 0.2f;
             }
-            gravity = 5 * speed;
+            gravity = (speed * speed * 80) / 239.9401f;
         }
 
         if (gameOver)
