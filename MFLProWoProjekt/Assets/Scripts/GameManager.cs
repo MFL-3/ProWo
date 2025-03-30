@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,14 +13,17 @@ public class GameManager : MonoBehaviour
     public bool jumping = false;
     public bool theend = false;
     public bool start = true;
+    public bool paused = false;
 
     public Vector3 duckposition;
     public Vector3 jumpposition;
 
+    public TextMeshProUGUI buttontext;
+
     public GameObject player;
 
     public float speed = 30;
-    public float gravity = 80;
+    public float gravity;
 
     public int scorereal = 0;
     public int highScore = 0;
@@ -41,8 +45,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Pausieren();
+        }
         //Im Spiel
-        if (!theend && !start)
+        if (!theend && !start && !paused)
         {
             timer -= Time.deltaTime;
 
@@ -60,7 +68,7 @@ public class GameManager : MonoBehaviour
             if (timer <= 0)
             {
                 timer = 1;
-                speed += 0.2f;
+                speed += 0.1f;
             }
             gravity = (speed * speed * 80) / 239.9401f;
         }
@@ -69,6 +77,19 @@ public class GameManager : MonoBehaviour
         {
             //Game Over Menu
             SceneManager.LoadScene(2);
+        }
+    }
+
+    public void Pausieren()
+    {
+        paused = !paused;
+        if (paused)
+        {
+            buttontext.text = "Play";
+        }
+        else
+        {
+            buttontext.text = "Pause";
         }
     }
 }

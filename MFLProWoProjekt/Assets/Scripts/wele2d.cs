@@ -6,22 +6,25 @@ public class Wele2d : MonoBehaviour
 {
     void Update()
     {
-        if (GameManager.instance.start)
+        if (!GameManager.instance.paused)
         {
-            Movevert(GameManager.instance.speed);
-        }
-        else if (!GameManager.instance.theend)
-        {
-            Movement(GameManager.instance.speed);
-        }
-        else
-        {
-            Movement(GameManager.instance.speed * 2);
-        }
+            if (GameManager.instance.start)
+            {
+                Movevert(GameManager.instance.speed);
+            }
+            else if (!GameManager.instance.theend)
+            {
+                Movement(GameManager.instance.speed);
+            }
+            else
+            {
+                Movement(GameManager.instance.speed * 2);
+            }
 
-        if(gameObject.transform.position.y >= 43)
-        {
-            GameManager.instance.start = false;
+            if (gameObject.transform.position.y >= 43)
+            {
+                GameManager.instance.start = false;
+            }
         }
 
     }

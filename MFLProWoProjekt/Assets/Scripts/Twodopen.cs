@@ -22,4 +22,14 @@ public class Twodopen : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void AboutOpen()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void MenuOpen()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

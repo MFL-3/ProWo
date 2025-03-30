@@ -28,132 +28,140 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new(gameObject.transform.position.x, gameObject.transform.position.y, 0);
-        ani.SetBool("trstart", GameManager.instance.start);
-        ani.SetBool("trjumping", GameManager.instance.jumping);
-        ani.SetBool("trduckedrun", GameManager.instance.ducked);
-        ani.SetBool("end", GameManager.instance.theend);
 
-        // Move forward
-        moveVector = Vector3.right * GameManager.instance.speed;
-
-
-        //Apply Gravity if not jumping
-        if (GameManager.instance.jumping)
+        if (!GameManager.instance.paused)
         {
-            currentGravity = 0f;
-            gravityMovement = Vector3.zero;
-        }
-        else
-        {
-            gravityMovement = new Vector3(0, -currentGravity, 0);
-            currentGravity += GameManager.instance.gravity * Time.deltaTime;
+            gameObject.transform.position = new(gameObject.transform.position.x, gameObject.transform.position.y, 0);
+            ani.speed = 1;
+            ani.SetBool("trstart", GameManager.instance.start);
+            ani.SetBool("trjumping", GameManager.instance.jumping);
+            ani.SetBool("trduckedrun", GameManager.instance.ducked);
+            ani.SetBool("end", GameManager.instance.theend);
+            // Move forward
+            moveVector = Vector3.right * GameManager.instance.speed;
 
-            // Dont apply Gravity while grounded
-            if (characterController.isGrounded && currentGravity > 1)
+
+            //Apply Gravity if not jumping
+            if (GameManager.instance.jumping)
             {
-                currentGravity = 1;
+                currentGravity = 0f;
+                gravityMovement = Vector3.zero;
             }
-        }
-        /*if (GameManager.instance.jumping)
-        {
-            gravityMovement = Vector3.zero;
-        }
-        else if (!characterController.isGrounded)
-        {
-            gravityMovement = new Vector3(0, -2 * GameManager.instance.speed, 0);
-        }
-        else
-        {
-            gravityMovement = Vector3.down;
-        }*/
+            else
+            {
+                gravityMovement = new Vector3(0, -currentGravity, 0);
+                currentGravity += GameManager.instance.gravity * Time.deltaTime;
 
-        //Jump Start
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
-        {
-            GameManager.instance.jumping = true;
-            if (GameManager.instance.ducked)
+                // Dont apply Gravity while grounded
+                if (characterController.isGrounded && currentGravity > 1)
+                {
+                    currentGravity = 1;
+                }
+            }
+            /*if (GameManager.instance.jumping)
+            {
+                gravityMovement = Vector3.zero;
+            }
+            else if (!characterController.isGrounded)
+            {
+                gravityMovement = new Vector3(0, -2 * GameManager.instance.speed, 0);
+            }
+            else
+            {
+                gravityMovement = Vector3.down;
+            }*/
+
+            //Jump Start
+            if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))
+            {
+                GameManager.instance.jumping = true;
+                if (GameManager.instance.ducked)
+                {
+                    GameManager.instance.ducked = false;
+                    characterController.center = new(0, 0.9f, 0);
+                    characterController.height = 1.8f;
+                }
+                GameManager.instance.jumpposition = gameObject.transform.position;
+                jumpVector = new Vector3(0, 4 * GameManager.instance.speed, 0);
+            }
+
+            //Jumping stop
+            if (GameManager.instance.jumping && gameObject.transform.position.y >= GameManager.instance.jumpposition.y + 35)
+            {
+                GameManager.instance.jumping = false;
+                jumpVector = Vector3.zero;
+            }
+
+            // Ducken
+            if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start))
+            {
+                //Scale
+                characterController.height = 1.1f;
+                characterController.center = new(0, 0.55f, 0);
+
+                //Duckposition, ducked
+                GameManager.instance.duckposition = gameObject.transform.position;
+                GameManager.instance.ducked = true;
+
+            }
+
+            //Aufstehen
+            if ((!GameManager.instance.ducked && GameManager.instance.jumping) || (gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
             {
                 GameManager.instance.ducked = false;
                 characterController.center = new(0, 0.9f, 0);
                 characterController.height = 1.8f;
             }
-            GameManager.instance.jumpposition = gameObject.transform.position;
-            jumpVector = new Vector3(0, 4 * GameManager.instance.speed, 0);
-        }
 
-        //Jumping stop
-        if (GameManager.instance.jumping && gameObject.transform.position.y >= GameManager.instance.jumpposition.y + 35)
-        {
-            GameManager.instance.jumping = false;
-            jumpVector = Vector3.zero;
-        }
+            //finalMovement
+            Vector3 finalMovement = moveVector + gravityMovement + jumpVector;
 
-        // Ducken
-        if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start))
-        {
-            //Scale
-            characterController.height = 1.1f;
-            characterController.center = new(0, 0.55f, 0);
+            //Move
+            if ((!GameManager.instance.theend) && (!GameManager.instance.start))
+            {
+                characterController.Move(finalMovement * Time.deltaTime);
+            }
+            else
+            {
+                GameManager.instance.jumping = false;
+                characterController.Move(gravityMovement * Time.deltaTime);
+            }
 
-            //Duckposition, ducked
-            GameManager.instance.duckposition = gameObject.transform.position;
-            GameManager.instance.ducked = true;
+            // End Jumping
+            if (GameManager.instance.jumping && characterController.isGrounded)
+            {
+                GameManager.instance.jumping = false;
+                currentGravity = 1;
+            }
 
-        }
-        
-        //Aufstehen
-        if ((!GameManager.instance.ducked && GameManager.instance.jumping ) || (gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
-        {
-            GameManager.instance.ducked = false;
-            characterController.center = new(0, 0.9f, 0);
-            characterController.height = 1.8f;
-        }
-        
-        //finalMovement
-        Vector3 finalMovement = moveVector + gravityMovement + jumpVector;
+            //Tile2 Colission
+            if (lastposition >= gameObject.transform.position.x && (!GameManager.instance.start) && (!GameManager.instance.theend))
+            {
+                Debug.Log("tile 2");
+                GameManager.instance.theend = true;
+            }
+            else
+            {
+                lastposition = gameObject.transform.position.x;
+            }
 
-        //Move
-        if ((!GameManager.instance.theend) && (!GameManager.instance.start))
-        {
-            characterController.Move(finalMovement * Time.deltaTime);
+            // Runterfallen
+            if (transform.position.y <= -40)
+            {
+                Debug.Log("Abgrund");
+                GameManager.instance.theend = true;
+            }
+
+            //Sterben
+            if (gameObject.transform.position.x <= welle.transform.position.x + 10)
+            {
+                Debug.Log("Welle");
+                Destroy(gameObject);
+            }
         }
         else
         {
-            GameManager.instance.jumping = false;
-            characterController.Move(gravityMovement * Time.deltaTime);
-        }
-
-        // End Jumping
-        if (GameManager.instance.jumping && characterController.isGrounded)
-        {
-            GameManager.instance.jumping = false;
-            currentGravity = 1;
-        }
-
-        //Tile2 Colission
-        if(lastposition >= gameObject.transform.position.x && (!GameManager.instance.start) && (!GameManager.instance.theend))
-        {
-            Debug.Log("tile 2");
-            GameManager.instance.theend = true;
-        }
-        else
-        {
-            lastposition = gameObject.transform.position.x;
-        }
-
-        // Runterfallen
-        if (transform.position.y <= -40)
-        {
-            Debug.Log("Abgrund");
-            GameManager.instance.theend = true;
-        }
-
-        //Sterben
-        if (gameObject.transform.position.x <= welle.transform.position.x + 10)
-        {
-            Debug.Log("Welle");
-            Destroy(gameObject);
+            ani.speed = 0;
         }
 
     }

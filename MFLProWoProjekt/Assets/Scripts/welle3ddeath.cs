@@ -7,15 +7,17 @@ public class Welle3ddeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager3d.instance.theend)
+        if (!GameManager3d.instance.paused)
         {
-            Movement(GameManager3d.instance.speed);
+            if (!GameManager3d.instance.theend)
+            {
+                Movement(GameManager3d.instance.speed);
+            }
+            else
+            {
+                Movement(GameManager3d.instance.speed * 8);
+            }
         }
-        else
-        {
-            Movement(GameManager3d.instance.speed * 8);
-        }
-
     }
 
     void Movement(float speed)

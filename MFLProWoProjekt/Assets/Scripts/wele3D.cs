@@ -7,18 +7,21 @@ public class Wele3D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager3d.instance.start)
+        if (!GameManager3d.instance.paused)
         {
-            Destroy(gameObject);
-        }
-        if (GameManager3d.instance.start)
-        {
-            Movevert(GameManager3d.instance.speed);
-        }
+            if (!GameManager3d.instance.start)
+            {
+                Destroy(gameObject);
+            }
+            if (GameManager3d.instance.start)
+            {
+                Movevert(GameManager3d.instance.speed);
+            }
 
-        if (gameObject.transform.position.y >= 40)
-        {
-            GameManager3d.instance.start = false;
+            if (gameObject.transform.position.y >= 40)
+            {
+                GameManager3d.instance.start = false;
+            }
         }
     }
     void Movevert(float speed)

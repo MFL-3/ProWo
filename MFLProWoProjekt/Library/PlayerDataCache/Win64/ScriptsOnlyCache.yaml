@@ -42,6 +42,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -62,6 +63,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.Outline
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
   serializedClasses:
     Unity.ProBuilder:
     - UnityEngine.ProBuilder.AutoUnwrapSettings
@@ -100,8 +105,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: Twodopen
+    methodName: AboutOpen
   - assembly: Assembly-CSharp
     fullTypeName: Twodopen
     methodName: ExitGame
@@ -112,11 +122,20 @@ ScriptsOnlyBuild:
     fullTypeName: Twodopen
     methodName: Zweid
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: Pausieren
+  - assembly: Assembly-CSharp
     fullTypeName: GO2DText
     methodName: LoadMenu
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager3d
+    methodName: Pausieren3D
+  - assembly: Assembly-CSharp
     fullTypeName: GO3DText
     methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Twodopen
+    methodName: MenuOpen
   sceneClasses:
     Assets/Scenes/2d.unity:
     - Class: 1
@@ -156,6 +175,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1650}
+    - Class: 114
       Script: {instanceID: 2006}
     - Class: 114
       Script: {instanceID: 2052}
@@ -165,6 +186,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2804}
     - Class: 114
       Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 3294}
     - Class: 114
       Script: {instanceID: 4334}
     - Class: 114
@@ -185,6 +208,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6478}
     - Class: 114
       Script: {instanceID: 6610}
+    - Class: 114
+      Script: {instanceID: 6994}
     - Class: 114
       Script: {instanceID: 8430}
     - Class: 114
@@ -253,6 +278,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1650}
+    - Class: 114
       Script: {instanceID: 1758}
     - Class: 114
       Script: {instanceID: 2330}
@@ -264,6 +291,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 2804}
     - Class: 114
       Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 3294}
     - Class: 114
       Script: {instanceID: 3572}
     - Class: 114
@@ -315,6 +344,71 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/About.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1650}
+    - Class: 114
+      Script: {instanceID: 2736}
+    - Class: 114
+      Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 3294}
+    - Class: 114
+      Script: {instanceID: 3756}
+    - Class: 114
+      Script: {instanceID: 4126}
+    - Class: 114
+      Script: {instanceID: 5444}
+    - Class: 114
+      Script: {instanceID: 6068}
+    - Class: 114
+      Script: {instanceID: 6242}
+    - Class: 114
+      Script: {instanceID: 6610}
+    - Class: 114
+      Script: {instanceID: 6618}
+    - Class: 114
+      Script: {instanceID: 7838}
+    - Class: 114
+      Script: {instanceID: 8164}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/GameOver2D.unity:
     - Class: 1
@@ -538,7 +632,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 9c89a7cf1c026f29c4559ba50469ef5f
+      Hash: aee544f0ab86213cae35240e9caa784b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager3d
@@ -1360,7 +1454,7 @@ ScriptsOnlyBuild:
     className: Entity
   - hash:
       serializedVersion: 2
-      Hash: 835b92335b9809ed8f5caca77e16e075
+      Hash: 828db814b79a7b6fac2b06ce263ed2c7
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1743,5 +1837,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameOver2D.unity
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
+  - Assets/Scenes/About.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    2.4/ProWoProjekt.exe
+    4.0/ProWoProjekt.exe
