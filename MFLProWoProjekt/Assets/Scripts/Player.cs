@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
             }
 
             // Ducken
-            if (Input.GetButtonDown("Ducken") && (GameManager.instance.ducked == false) && characterController.isGrounded && (!GameManager.instance.start))
+            /*if (Input.GetButtonDown("Ducken") && (!GameManager.instance.ducked) && characterController.isGrounded && (!GameManager.instance.start))
             {
                 //Scale
                 characterController.height = 1.1f;
@@ -106,7 +106,26 @@ public class Player : MonoBehaviour
             }
 
             //Aufstehen
-            if ((!GameManager.instance.ducked && GameManager.instance.jumping) || (gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked == true))
+            if (Input.GetButtonUp("Ducken") && (GameManager.instance.ducked))
+            {
+                GameManager.instance.ducked = false;
+                characterController.center = new(0, 0.9f, 0);
+                characterController.height = 1.8f;
+            }*/
+            if (Input.GetButtonDown("Ducken") && (!GameManager.instance.ducked) && characterController.isGrounded && (!GameManager.instance.start))
+            {
+                //Scale
+                characterController.height = 1.1f;
+                characterController.center = new(0, 0.55f, 0);
+
+                //Duckposition, ducked
+                GameManager.instance.duckposition = gameObject.transform.position;
+                GameManager.instance.ducked = true;
+
+            }
+
+            //Aufstehen
+            if ((gameObject.transform.position.x >= GameManager.instance.duckposition.x + 33) && (GameManager.instance.ducked))
             {
                 GameManager.instance.ducked = false;
                 characterController.center = new(0, 0.9f, 0);

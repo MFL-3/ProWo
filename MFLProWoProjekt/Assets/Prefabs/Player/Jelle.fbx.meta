@@ -46,8 +46,8 @@ ModelImporter:
       name: idle
       takeName: metarig.001|metarigAction
       internalID: -8451623774555390483
-      firstFrame: 1
-      lastFrame: 60
+      firstFrame: 2
+      lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

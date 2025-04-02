@@ -78,7 +78,7 @@ public class TileSpawner : MonoBehaviour
                     }
                     break;
                 case 2:
-                    Instantiate(tile2, new(spawnposition.x - 10, spawnposition.y, spawnposition.z), tile2.transform.rotation);
+                    Instantiate(tile2, new(spawnposition.x - 10, spawnposition.y+2, spawnposition.z), tile2.transform.rotation);
                     if (treppe)
                     {
                         treppe = false;

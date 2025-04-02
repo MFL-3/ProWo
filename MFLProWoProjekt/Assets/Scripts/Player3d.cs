@@ -95,6 +95,27 @@ public class Player3d : MonoBehaviour
             }
 
             // Ducken
+            /*if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
+            {
+                //Scale
+                characterController.height = 1.1f;
+                characterController.center = new(0, 0.55f, 0);
+
+                //Duckposition, ducked
+                GameManager3d.instance.duckposition = gameObject.transform.position;
+                GameManager3d.instance.ducked = true;
+            }
+
+            //Aufstehen
+            if (Input.GetButtonUp("Ducken") && (GameManager3d.instance.ducked == true))
+            {
+                GameManager3d.instance.ducked = false;
+                characterController.center = new(0, 0.9f, 0);
+                characterController.height = 1.8f;
+            }*/
+
+
+
             if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
             {
                 //Scale

@@ -810,11 +810,10 @@ MonoBehaviour:
 
     left shift/ down: sneak
 
-    space/up:
-    jump
+    space/
+    up: jump
 
-    in 3D: left/ right: go left / go right
-
+    in 3D: left/ right: go left/ go right
 
 
     This game is made by
@@ -824,21 +823,18 @@ MonoBehaviour:
 
 
     Some elements of the game are copyrightet
-    by:
+    by
 
     Copyright (c) 2021 Jelle Vermandere
 
 
-    Thanks to:
+    Contact: Krol222010@gmx.de
 
-    Polina Rudenko
 
-    Quentin
-    Hufschmidt
+    Thanks
+    to
 
-    Matthias Schreiber
-
-    Luke Adam'
+    Polina Rudenko, Quentin Huffschmid, Matthias Schreiber and Luke Adam'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -901,7 +897,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -160.38492, w: -308.89926}
+  m_margin: {x: 0, y: 0, z: -224.96484, w: -308.8964}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
