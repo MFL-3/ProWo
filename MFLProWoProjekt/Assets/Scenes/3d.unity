@@ -231,7 +231,7 @@ CharacterController:
   m_Height: 1.8
   m_Radius: 0.2
   m_SlopeLimit: 45
-  m_StepOffset: 3
+  m_StepOffset: 1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
@@ -1179,6 +1179,7 @@ MonoBehaviour:
   theend: 0
   start: 1
   paused: 0
+  strangeVersion: 0
   duckposition: {x: 0, y: 0, z: 0}
   jumpposition: {x: 0, y: 0, z: 0}
   buttontext: {fileID: 332647357}
@@ -1556,7 +1557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -48.408264, y: -14.985001}
+  m_AnchoredPosition: {x: -48.408264, y: -14.984985}
   m_SizeDelta: {x: 96.8165, y: 29.9701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104630811

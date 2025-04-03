@@ -57,18 +57,6 @@ public class Player3d : MonoBehaviour
                     currentGravity = 1;
                 }
             }
-            /*if (GameManager3d.instance.jumping)
-            {
-                gravityMovement = Vector3.zero;
-            }
-            else if (!characterController.isGrounded)
-            {
-                gravityMovement = new Vector3(0, -2 * GameManager3d.instance.speed, 0);
-            }
-            else
-            {
-                gravityMovement = Vector3.down;
-            }*/
 
             //Spuren wechseln
             spurwechsel = 3f * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Vector3.right;
@@ -88,53 +76,55 @@ public class Player3d : MonoBehaviour
             }
 
             //Jumping stop
-            if (GameManager3d.instance.jumping && gameObject.transform.position.y >= GameManager3d.instance.jumpposition.y + 35)
+            if (GameManager3d.instance.jumping && (gameObject.transform.position.y >= GameManager3d.instance.jumpposition.y + 35))
             {
                 GameManager3d.instance.jumping = false;
                 jumpVector = Vector3.zero;
             }
 
             // Ducken
-            /*if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
+            if (GameManager3d.instance.strangeVersion)
             {
-                //Scale
-                characterController.height = 1.1f;
-                characterController.center = new(0, 0.55f, 0);
+                if (Input.GetButtonDown("Ducken") && (!GameManager3d.instance.ducked) && characterController.isGrounded && (!GameManager3d.instance.start))
+                {
+                    //Scale
+                    characterController.height = 1.1f;
+                    characterController.center = new(0, 0.55f, 0);
 
-                //Duckposition, ducked
-                GameManager3d.instance.duckposition = gameObject.transform.position;
-                GameManager3d.instance.ducked = true;
+                    //Duckposition, ducked
+                    GameManager3d.instance.duckposition = gameObject.transform.position;
+                    GameManager3d.instance.ducked = true;
+                }
+
+                //Aufstehen
+                if (Input.GetButtonUp("Ducken") && GameManager3d.instance.ducked)
+                {
+                    GameManager3d.instance.ducked = false;
+                    characterController.center = new(0, 0.9f, 0);
+                    characterController.height = 1.8f;
+                }
             }
-
-            //Aufstehen
-            if (Input.GetButtonUp("Ducken") && (GameManager3d.instance.ducked == true))
+            else
             {
-                GameManager3d.instance.ducked = false;
-                characterController.center = new(0, 0.9f, 0);
-                characterController.height = 1.8f;
-            }*/
+                if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
+                {
+                    //Scale
+                    characterController.height = 1.1f;
+                    characterController.center = new(0, 0.55f, 0);
 
+                    //Duckposition, ducked
+                    GameManager3d.instance.duckposition = gameObject.transform.position;
+                    GameManager3d.instance.ducked = true;
+                }
 
-
-            if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
-            {
-                //Scale
-                characterController.height = 1.1f;
-                characterController.center = new(0, 0.55f, 0);
-
-                //Duckposition, ducked
-                GameManager3d.instance.duckposition = gameObject.transform.position;
-                GameManager3d.instance.ducked = true;
+                //Aufstehen
+                if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked == true))
+                {
+                    GameManager3d.instance.ducked = false;
+                    characterController.center = new(0, 0.9f, 0);
+                    characterController.height = 1.8f;
+                }
             }
-
-            //Aufstehen
-            if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked == true))
-            {
-                GameManager3d.instance.ducked = false;
-                characterController.center = new(0, 0.9f, 0);
-                characterController.height = 1.8f;
-            }
-
             //finalMovement
             Vector3 finalMovement = moveVector + gravityMovement + jumpVector + spurwechsel;
 

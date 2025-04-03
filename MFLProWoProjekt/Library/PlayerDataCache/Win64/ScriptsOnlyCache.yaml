@@ -1,9 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bildschirm
     - Cameramovement
     - Cameramovement3D2
     - Cameramovement3d
+    - FullScreenSetter
     - GO2DText
     - GO3DText
     - GameManager
@@ -19,6 +21,7 @@ ScriptsOnlyBuild:
     - ResolutionSettings
     - ScoreText
     - ScoreText3d
+    - Sliderscript
     - Spawner3d
     - TileSpawner
     - Transparentchange
@@ -47,8 +50,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -65,6 +70,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Outline
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
   serializedClasses:
     Unity.ProBuilder:
     - UnityEngine.ProBuilder.AutoUnwrapSettings
@@ -105,6 +111,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Scrollbar/ScrollEvent
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
@@ -447,6 +454,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6242}
     - Class: 114
       Script: {instanceID: 6610}
+    - Class: 114
+      Script: {instanceID: 42504}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -502,6 +511,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6610}
     - Class: 114
       Script: {instanceID: 7940}
+    - Class: 114
+      Script: {instanceID: 42504}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -568,6 +579,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4652}
     - Class: 114
+      Script: {instanceID: 5372}
+    - Class: 114
       Script: {instanceID: 5444}
     - Class: 114
       Script: {instanceID: 6068}
@@ -579,6 +592,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8164}
     - Class: 114
       Script: {instanceID: 8596}
+    - Class: 114
+      Script: {instanceID: 25362}
+    - Class: 114
+      Script: {instanceID: 59666}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -630,7 +647,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: aee544f0ab86213cae35240e9caa784b
+      Hash: 2725fbedb1280e64883e085c6a0133cd
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager3d
@@ -1110,7 +1127,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: ef53807d9fbed22c30620c4d7f72674a
+      Hash: a503a2d7e32f0cb9c250b7095897268f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ResolutionSettings
@@ -1452,7 +1469,7 @@ ScriptsOnlyBuild:
     className: Entity
   - hash:
       serializedVersion: 2
-      Hash: 828db814b79a7b6fac2b06ce263ed2c7
+      Hash: 8b887011cf7edd85a72db5829acbb926
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1828,6 +1845,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7e7d601c6be080c92588a4c03562b588
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Sliderscript
+  - hash:
+      serializedVersion: 2
+      Hash: 114d7f2d291a2031615ea44e3cb85828
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Bildschirm
+  - hash:
+      serializedVersion: 2
+      Hash: a309c4e980da80ab4b08c0b1423f4846
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FullScreenSetter
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1836,5 +1871,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
   - Assets/Scenes/About.unity
-  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    3.1 sneak while buttondown/ProWoProjekt.exe
+  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/test/ProWoProjekt.exe

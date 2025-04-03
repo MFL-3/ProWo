@@ -5,9 +5,9 @@ using TMPro;
 
 public class ResolutionSettings : MonoBehaviour
 {
-    //public TMP_Dropdown resolutionDropdown;
+    public TMP_Dropdown resolutionDropdown;
 
-    List<Resolution> predefined16By9Resolutions = new List<Resolution>
+    public List<Resolution> predefined16By9Resolutions = new()
     {
         new Resolution { width = 720, height = 400 },
         new Resolution { width = 1280, height = 720 },
@@ -18,18 +18,18 @@ public class ResolutionSettings : MonoBehaviour
         new Resolution { width = 3840, height = 2160 }
     };
 
-    List<Resolution> possibleResolutionsForUsersMonitor = new List<Resolution> { };
+    public List<Resolution> possibleResolutionsForUsersMonitor = new() { };
 
-    void Awake()
+    void Start()
     {
         PopulateResolutionDropdown();
     }
 
-    void PopulateResolutionDropdown()
+    public void PopulateResolutionDropdown()
     {
-        //resolutionDropdown.ClearOptions();
+        resolutionDropdown.ClearOptions();
 
-        List<string> options = new List<string>();
+        List<string> options = new();
 
         int currentResolutionIndex = 0;
 
@@ -53,18 +53,19 @@ public class ResolutionSettings : MonoBehaviour
             }
             else
             {
+                Debug.Log(currentRes);
                 break; //At highest possible resolution for user so stop checking for more options
             }
         }
 
-        //resolutionDropdown.AddOptions(options);
-        //resolutionDropdown.value = currentResolutionIndex;
-        //resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
 
-        SetResolution(currentResolutionIndex);
+        SetResolutiononmonitor(currentResolutionIndex);
     }
 
-    public void SetResolution(int resolutionIndex)
+    public void SetResolutiononmonitor(int resolutionIndex)
     {
         Resolution resolution = possibleResolutionsForUsersMonitor[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
@@ -82,7 +83,7 @@ public class ResolutionSettings : MonoBehaviour
             Display myDisplay = Display.displays[i];
             int myWidth = myDisplay.systemWidth;
             int myHeight = myDisplay.systemHeight;
-            //Debug.LogError("Display DETECTED: " + myWidth + "x" + myHeight); //Uncomment this line for debugging purposes to see which displays are being detected
+            Debug.LogError("Display DETECTED: " + myWidth + "x" + myHeight); //Uncomment this line for debugging purposes to see which displays are being detected
 
             if (myWidth > largestResWidth && myHeight > largestResHeight)
             {

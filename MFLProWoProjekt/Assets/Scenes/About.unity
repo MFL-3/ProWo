@@ -806,35 +806,39 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game control:
 
-    esc: pause
+    esc: pause the game
 
-    left shift/ down: sneak
+    left shift/ down: the player
+    ducks
 
-    space/
-    up: jump
+    space/ up: the player jumps
 
-    in 3D: left/ right: go left/ go right
+    in 3D: left/ right: the player goes
+    left/ goes right
 
 
     This game is made by
 
-    Michael
-    Krol, Florentina Mertz and Lukas Tornow
+    Michael Krol, Florentina Mertz
+    and Lukas Tornow
 
 
-    Some elements of the game are copyrightet
-    by
+    Some elements of the game are copyrightet by
 
-    Copyright (c) 2021 Jelle Vermandere
-
-
-    Contact: Krol222010@gmx.de
+    Copyright
+    (c) 2021 Jelle Vermandere
 
 
-    Thanks
-    to
+    Contact us:
 
-    Polina Rudenko, Quentin Huffschmid, Matthias Schreiber and Luke Adam'
+    Krol222010@gmx.de, Subject:
+    "Tsunami Runner"
+
+
+    Thanks to
+
+    Polina Rudenko, Quentin Huffschmid, Matthias
+    Schreiber and Luke Adam'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

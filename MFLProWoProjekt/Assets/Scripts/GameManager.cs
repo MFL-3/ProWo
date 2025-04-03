@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool theend = false;
     public bool start = true;
     public bool paused = false;
+    public bool strangeVersion;
 
     public Vector3 duckposition;
     public Vector3 jumpposition;
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
     {
         //highscore aus Start Menu
         highScore = MenuHiScore.HiScore2D;
+
+        strangeVersion = Sliderscript.komischeversion;
     }
     // Update is called once per frame
     void Update()
