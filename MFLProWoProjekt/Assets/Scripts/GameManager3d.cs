@@ -14,7 +14,9 @@ public class GameManager3d : MonoBehaviour
     public bool theend = false;
     public bool start = true;
     public bool paused = false;
+    public bool wechselt = false;
     public bool strangeVersion;
+    public bool strangewechsel;
 
     public Vector3 duckposition;
     public Vector3 jumpposition;
@@ -45,6 +47,7 @@ public class GameManager3d : MonoBehaviour
         highScore = MenuHiScore.HiScore3D;
 
         strangeVersion = Sliderscript.komischeversion;
+        strangewechsel = Sliderscript.komischwechseln;
     }
     // Update is called once per frame
     void Update()

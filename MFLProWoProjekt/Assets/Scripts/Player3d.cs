@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using System.Net.Cache;
 
 public class Player3d : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class Player3d : MonoBehaviour
     private Vector3 spurwechsel;
     private float currentGravity = 1f;
     private float lastposition;
-
+    private float wechselposition;
+    private float x;
     private Animator ani;
 
     [SerializeField] GameObject welle;
@@ -59,8 +61,39 @@ public class Player3d : MonoBehaviour
             }
 
             //Spuren wechseln
-            spurwechsel = 3f * GameManager3d.instance.speed * Input.GetAxis("Horizontal") * Vector3.right;
+            if (!GameManager3d.instance.strangewechsel)
+            {
+                x = Input.GetAxis("Horizontal");
+                spurwechsel = 3f * GameManager3d.instance.speed * x * Vector3.right;
+                GameManager3d.instance.wechselt = Input.GetAxis("Horizontal") != 0;
+            }
+            else
+            {
+                if ((Input.GetAxis("Horizontal") != 0) && !GameManager3d.instance.wechselt)
+                {
+                    x = Input.GetAxis("Horizontal");
+                    GameManager3d.instance.wechselt = true;
+                    wechselposition = gameObject.transform.position.x;
+                }
 
+                if (GameManager3d.instance.wechselt)
+                {
+                    spurwechsel = 3f * GameManager3d.instance.speed * x * Vector3.right;
+                }
+
+                if (x > 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x >= wechselposition + 20)
+                {
+                    x = 0;
+                    GameManager3d.instance.wechselt = false;
+                    spurwechsel = Vector3.zero;
+                }
+                else if (x < 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x <= wechselposition - 20)
+                {
+                    x = 0;
+                    GameManager3d.instance.wechselt = false;
+                    spurwechsel = Vector3.zero;
+                }
+            }
             //Jump Start
             if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager3d.instance.start))
             {
@@ -72,7 +105,16 @@ public class Player3d : MonoBehaviour
                     characterController.height = 1.8f;
                 }
                 GameManager3d.instance.jumpposition = gameObject.transform.position;
-                jumpVector = new Vector3(0, 4 * GameManager3d.instance.speed, 0);
+                jumpVector = new(0, 4 * GameManager3d.instance.speed, 0);
+            }
+
+            if (GameManager3d.instance.jumping && characterController.collisionFlags == CollisionFlags.Sides && GameManager3d.instance.wechselt)
+            {
+                characterController.stepOffset = 1;
+            }
+            else
+            {
+                characterController.stepOffset = 3;
             }
 
             //Jumping stop

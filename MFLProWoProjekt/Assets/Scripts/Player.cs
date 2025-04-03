@@ -58,18 +58,6 @@ public class Player : MonoBehaviour
                     currentGravity = 1;
                 }
             }
-            /*if (GameManager.instance.jumping)
-            {
-                gravityMovement = Vector3.zero;
-            }
-            else if (!characterController.isGrounded)
-            {
-                gravityMovement = new Vector3(0, -2 * GameManager.instance.speed, 0);
-            }
-            else
-            {
-                gravityMovement = Vector3.down;
-            }*/
 
             //Jump Start
             if (Input.GetButtonDown("Jump") && characterController.isGrounded && (!GameManager.instance.start))

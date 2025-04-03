@@ -1179,7 +1179,9 @@ MonoBehaviour:
   theend: 0
   start: 1
   paused: 0
+  wechselt: 0
   strangeVersion: 0
+  strangewechsel: 0
   duckposition: {x: 0, y: 0, z: 0}
   jumpposition: {x: 0, y: 0, z: 0}
   buttontext: {fileID: 332647357}

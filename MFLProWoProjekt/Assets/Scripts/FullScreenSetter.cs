@@ -9,10 +9,4 @@ public class FullScreenSetter : MonoBehaviour
     {
         Screen.fullScreen = Bildschirm.mode;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

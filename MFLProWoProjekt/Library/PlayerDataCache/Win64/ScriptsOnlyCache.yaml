@@ -196,29 +196,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4334}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 5078}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 5758}
+      Script: {instanceID: 5760}
     - Class: 114
-      Script: {instanceID: 5892}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 5930}
+      Script: {instanceID: 5932}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 6482}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6614}
     - Class: 114
-      Script: {instanceID: 6994}
+      Script: {instanceID: 6998}
     - Class: 114
-      Script: {instanceID: 8430}
+      Script: {instanceID: 8436}
     - Class: 114
-      Script: {instanceID: 8546}
+      Script: {instanceID: 8552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -303,27 +303,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 5078}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 5528}
+      Script: {instanceID: 5530}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6200}
+      Script: {instanceID: 6202}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6614}
     - Class: 114
-      Script: {instanceID: 7590}
+      Script: {instanceID: 7594}
     - Class: 114
-      Script: {instanceID: 7626}
+      Script: {instanceID: 7630}
     - Class: 114
-      Script: {instanceID: 8186}
+      Script: {instanceID: 8190}
     - Class: 114
-      Script: {instanceID: 8478}
+      Script: {instanceID: 8484}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -386,19 +386,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4126}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6614}
     - Class: 114
-      Script: {instanceID: 6618}
+      Script: {instanceID: 6622}
     - Class: 114
-      Script: {instanceID: 7838}
+      Script: {instanceID: 7842}
     - Class: 114
-      Script: {instanceID: 8164}
+      Script: {instanceID: 8168}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -447,15 +447,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4100}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6380}
     - Class: 114
-      Script: {instanceID: 42504}
+      Script: {instanceID: 6614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -502,17 +502,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6380}
     - Class: 114
-      Script: {instanceID: 7940}
+      Script: {instanceID: 6614}
     - Class: 114
-      Script: {instanceID: 42504}
+      Script: {instanceID: 7944}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -579,23 +579,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 4672}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5374}
     - Class: 114
-      Script: {instanceID: 6068}
+      Script: {instanceID: 5446}
     - Class: 114
-      Script: {instanceID: 6242}
+      Script: {instanceID: 6070}
     - Class: 114
-      Script: {instanceID: 6610}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 8164}
+      Script: {instanceID: 6614}
     - Class: 114
-      Script: {instanceID: 8596}
+      Script: {instanceID: 8168}
     - Class: 114
-      Script: {instanceID: 25362}
+      Script: {instanceID: 8370}
     - Class: 114
-      Script: {instanceID: 59666}
+      Script: {instanceID: 8602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -647,7 +647,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 2725fbedb1280e64883e085c6a0133cd
+      Hash: 87acafdb1794d1f65aabf8e56c5ff06c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager3d
@@ -1181,6 +1181,12 @@ ScriptsOnlyBuild:
     className: TMPro_InstructionOverlay
   - hash:
       serializedVersion: 2
+      Hash: a309c4e980da80ab4b08c0b1423f4846
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FullScreenSetter
+  - hash:
+      serializedVersion: 2
       Hash: a75a568ce902366f4e82fc98ca6108f5
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1455,6 +1461,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 114d7f2d291a2031615ea44e3cb85828
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Bildschirm
   - hash:
       serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
@@ -1781,6 +1793,12 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: e0f0326db3aae5a257bd1af03223729b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Sliderscript
+  - hash:
+      serializedVersion: 2
       Hash: 9b26862c1f477d2100eedd66f9929b9c
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1845,24 +1863,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 7e7d601c6be080c92588a4c03562b588
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Sliderscript
-  - hash:
-      serializedVersion: 2
-      Hash: 114d7f2d291a2031615ea44e3cb85828
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Bildschirm
-  - hash:
-      serializedVersion: 2
-      Hash: a309c4e980da80ab4b08c0b1423f4846
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FullScreenSetter
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1871,4 +1871,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/3d.unity
   - Assets/Scenes/GameOver3D.unity
   - Assets/Scenes/About.unity
-  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/test/ProWoProjekt.exe
+  playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
+    3.4/ProWoProjekt.exe
