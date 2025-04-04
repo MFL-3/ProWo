@@ -50,7 +50,7 @@ public class Player3d : MonoBehaviour
             }
             else
             {
-                gravityMovement = new Vector3(0, -currentGravity, 0);
+                gravityMovement = new(0, -currentGravity, 0);
                 currentGravity += GameManager3d.instance.gravity * Time.deltaTime;
 
                 // Dont apply Gravity while grounded
@@ -162,7 +162,7 @@ public class Player3d : MonoBehaviour
             }
             else
             {
-                if (Input.GetButtonDown("Ducken") && (GameManager3d.instance.ducked == false) && characterController.isGrounded && (!GameManager3d.instance.start))
+                if (Input.GetButtonDown("Ducken") && (!GameManager3d.instance.ducked) && characterController.isGrounded && (!GameManager3d.instance.start))
                 {
                     //Scale
                     characterController.height = 1.1f;
@@ -174,7 +174,7 @@ public class Player3d : MonoBehaviour
                 }
 
                 //Aufstehen
-                if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked == true))
+                if ((gameObject.transform.position.z >= GameManager3d.instance.duckposition.z + 35) && (GameManager3d.instance.ducked))
                 {
                     GameManager3d.instance.ducked = false;
                     characterController.center = new(0, 0.9f, 0);

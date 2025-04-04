@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jelle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 817c93a9111218741baa7716d602adde, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: 817c93a9111218741baa7716d602adde, type: 3}
@@ -782,6 +786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91671611aa3b07f4598d0fd9b029f544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
+  slow: 0
+  slowspur: 0
   spawnposition1: {x: 0, y: -20, z: 0}
   spawnposition2: {x: 0, y: 0, z: 0}
   spawnposition3: {x: 0, y: 20, z: 0}
@@ -803,6 +810,7 @@ MonoBehaviour:
   tile3: {fileID: 4244679112657525125, guid: 0415011fe028878479bb4a217d7763d6, type: 3}
   tile5: {fileID: 7678530532618101374, guid: 20113d96d826a0148b3fc2e635c03555, type: 3}
   absperr: {fileID: 8754760840645171786, guid: 40ef3394ae8a01d46af622e7e51e2d72, type: 3}
+  tile1slow: {fileID: 5349967330355010398, guid: 57ac91570b396d84fb6de15e02038329, type: 3}
 --- !u!1 &770794237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5054464250899849529, guid: b3dfc46eaca19fb49a034a14f62fa8ae, type: 3}
@@ -1179,6 +1187,7 @@ MonoBehaviour:
   theend: 0
   start: 1
   paused: 0
+  slowed: 0
   wechselt: 0
   backwechsel: 0
   strangeVersion: 0
@@ -1188,6 +1197,7 @@ MonoBehaviour:
   buttontext: {fileID: 332647357}
   player3d: {fileID: 18121703}
   speed: 20
+  oldspeed: 0
   gravity: 80
   scorereal: 0
   highScore: 0

@@ -14,6 +14,7 @@ public class GameManager3d : MonoBehaviour
     public bool theend = false;
     public bool start = true;
     public bool paused = false;
+    public bool slowed = false;
     public bool wechselt = false;
     public bool backwechsel = false;
     public bool strangeVersion;
@@ -26,13 +27,15 @@ public class GameManager3d : MonoBehaviour
 
     public GameObject player3d;
 
-    public float speed = 30;
+    public float speed = 20;
+    public float oldspeed;
     public float gravity;
 
     public int scorereal = 0;
     public int highScore = 0;
 
     private float timer = 15;
+    private float slowtimer = 5;
     private float score = 0;
 
     [SerializeField] GameObject block;
@@ -57,10 +60,23 @@ public class GameManager3d : MonoBehaviour
         {
             Pausieren3D();
         }
+
         //Im Spiel
         if (!theend && !start && !paused)
         {
             timer -= Time.deltaTime;
+
+            if (slowed)
+            {
+                slowtimer -= Time.deltaTime;
+            }
+
+            if (slowtimer <= 0 && slowed)
+            {
+                slowtimer = 5;
+                slowed = false;
+                speed = oldspeed;
+            }
             //Scre erhoehen
             score += Time.deltaTime;
             //nur ganzzahlige Werte ausgeben
@@ -71,7 +87,7 @@ public class GameManager3d : MonoBehaviour
                 highScore = scorereal;
             }
             //Ab 15 Sekunden 1 mal pro sekunde Geschwindigkeit erhoehen
-            if (timer <= 0)
+            if (timer <= 0 && !slowed)
             {
                 timer = 1;
                 speed += 0.1f;

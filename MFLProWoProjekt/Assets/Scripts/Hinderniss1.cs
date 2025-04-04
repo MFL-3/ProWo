@@ -20,7 +20,6 @@ public class Hinderniss1 : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-        Debug.Log("3D");
         GameManager3d.instance.theend = true;       
     }
 }

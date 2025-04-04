@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Spawner3d : MonoBehaviour
 {
+    public int count = 0;
+    public bool slow = false;
+    public int slowspur;
+
     public Vector3 spawnposition1 = new(-20, 0, 0);
     public Vector3 spawnposition2 = Vector3.zero;
     public Vector3 spawnposition3 = new(20, 0, 0);
@@ -35,6 +39,8 @@ public class Spawner3d : MonoBehaviour
     [SerializeField] GameObject tile5;
 
     [SerializeField] GameObject absperr;
+
+    [SerializeField] GameObject tile1slow;
 
     GameObject player;
 
@@ -100,20 +106,35 @@ public class Spawner3d : MonoBehaviour
     {
         for (int i = 0; i < 100; i++)
         {
+            if(count == 100)
+            {
+                count = 0;
+                slow = true;
+                slowspur = Random.Range(1, 4);
+            }
             //Spur1
             prevprevtile1 = prevtile1;
             prevtile1 = currenttile1;
             switch (nexttile1)
             {
                 case 1:
-                    Instantiate(tile1, spawnposition1, tile1.transform.rotation);
+                    if (slow && slowspur == 1)
+                    {
+                        Instantiate(tile1slow, spawnposition1, tile1slow.transform.rotation);
+                        slow = false;
+                    }
+                    else
+                    {
+                        Instantiate(tile1, spawnposition1, tile1.transform.rotation);
+                    }
+
                     currenttile1 = nexttile1;
                     if (treppe1)
                     {
                         treppe1 = false;
                         nexttile1 = 1;
                     }
-                    //abfrage anderer Stufen, damit keine Fallen entstehen
+                    //Abfrage anderer Stufen, damit keine Fallen entstehen
                     else if (nexttile2 == 5)
                     {
                         nexttile1 = Random.Range(1, 5);
@@ -180,7 +201,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
             }
-            spawnposition1 = new Vector3(-20, 0, spawnposition1.z + 20);
+            spawnposition1 = new(-20, 0, spawnposition1.z + 20);
 
             //Spur2
             prevprevtile2 = prevtile2;
@@ -188,7 +209,15 @@ public class Spawner3d : MonoBehaviour
             switch (nexttile2)
             {
                 case 1:
-                    Instantiate(tile1, spawnposition2, tile1.transform.rotation);
+                    if (slow && slowspur == 2)
+                    {
+                        Instantiate(tile1slow, spawnposition2, tile1slow.transform.rotation);
+                        slow = false;
+                    }
+                    else
+                    {
+                        Instantiate(tile1, spawnposition2, tile1.transform.rotation);
+                    }
                     currenttile2 = nexttile2;
                     if (treppe2)
                     {
@@ -261,7 +290,7 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
             }
-            spawnposition2 = new Vector3(0, 0, spawnposition2.z + 20);
+            spawnposition2 = new(0, 0, spawnposition2.z + 20);
 
             //Spur3
             prevprevtile3 = prevtile3;
@@ -269,7 +298,15 @@ public class Spawner3d : MonoBehaviour
             switch (nexttile3)
             {
                 case 1:
-                    Instantiate(tile1, spawnposition3, tile1.transform.rotation);
+                    if (slow && slowspur == 3)
+                    {
+                        Instantiate(tile1slow, spawnposition3, tile1slow.transform.rotation);
+                        slow = false;
+                    }
+                    else
+                    {
+                        Instantiate(tile1, spawnposition3, tile1.transform.rotation);
+                    }
                     currenttile3 = nexttile3;
                     
                     if (treppe3)
@@ -342,7 +379,13 @@ public class Spawner3d : MonoBehaviour
                     }
                     break;
             }
-            spawnposition3 = new Vector3(20, 0, spawnposition3.z + 20);
+            spawnposition3 = new(20, 0, spawnposition3.z + 20);
+
+            if (!slow)
+            {
+                count++;
+            }
+
         }
     }
 }
