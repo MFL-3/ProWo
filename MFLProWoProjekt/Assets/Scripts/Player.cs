@@ -149,7 +149,6 @@ public class Player : MonoBehaviour
             //Tile2 Colission
             if (lastposition >= gameObject.transform.position.x && (!GameManager.instance.start) && (!GameManager.instance.theend))
             {
-                Debug.Log("tile 2");
                 GameManager.instance.theend = true;
             }
             else
@@ -160,14 +159,12 @@ public class Player : MonoBehaviour
             // Runterfallen
             if (transform.position.y <= -40)
             {
-                Debug.Log("Abgrund");
                 GameManager.instance.theend = true;
             }
 
             //Sterben
             if (gameObject.transform.position.x <= welle.transform.position.x + 10)
             {
-                Debug.Log("Welle");
                 Destroy(gameObject);
             }
         }

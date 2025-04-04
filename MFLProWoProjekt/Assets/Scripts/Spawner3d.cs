@@ -80,18 +80,20 @@ public class Spawner3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnposition1.z - player.transform.position.z <= 500)
+        if (player != null)
         {
-            Place();
+            if (spawnposition1.z - player.transform.position.z <= 500)
+            {
+                Place();
+            }
+
+            //absperrungen placen
+            if (player.transform.position.z - spawnposition4.z >= 500)
+            {
+                spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
+                Instantiate(absperr, spawnposition4, absperr.transform.rotation);
+            }
         }
-
-        //absperrungen placen
-        if (player.transform.position.z - spawnposition4.z  >= 500)
-        {
-            spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
-            Instantiate(absperr, spawnposition4, absperr.transform.rotation);
-        } 
-
     }
 
     void Place()

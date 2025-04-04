@@ -41,11 +41,13 @@ public class TileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawnposition.x - player.transform.position.x <= 100)
+        if (player != null)
         {
-            Place();
-        }
-               
+            if (spawnposition.x - player.transform.position.x <= 100)
+            {
+                Place();
+            }
+        }       
     }
 
     void Place()

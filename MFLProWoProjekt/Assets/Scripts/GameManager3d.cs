@@ -15,6 +15,7 @@ public class GameManager3d : MonoBehaviour
     public bool start = true;
     public bool paused = false;
     public bool wechselt = false;
+    public bool backwechsel = false;
     public bool strangeVersion;
     public bool strangewechsel;
 

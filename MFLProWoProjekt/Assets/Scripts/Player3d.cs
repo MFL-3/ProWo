@@ -69,25 +69,48 @@ public class Player3d : MonoBehaviour
             }
             else
             {
-                if ((Input.GetAxis("Horizontal") != 0) && !GameManager3d.instance.wechselt)
+                //Input
+                if ((Input.GetAxis("Horizontal") < 0) && !GameManager3d.instance.wechselt)
                 {
-                    x = Input.GetAxis("Horizontal");
+                    x = -1;
+                    GameManager3d.instance.wechselt = true;
+                    wechselposition = gameObject.transform.position.x;
+                }
+                else if ((Input.GetAxis("Horizontal") > 0) && !GameManager3d.instance.wechselt)
+                {
+                    x = 1;
                     GameManager3d.instance.wechselt = true;
                     wechselposition = gameObject.transform.position.x;
                 }
 
+                //Vector
                 if (GameManager3d.instance.wechselt)
                 {
                     spurwechsel = 3f * GameManager3d.instance.speed * x * Vector3.right;
                 }
 
-                if (x > 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x >= wechselposition + 20)
+                //Stopwechsel
+                if (GameManager3d.instance.backwechsel && x < 0 && gameObject.transform.position.x <= wechselposition)
+                {
+                    x = 0;
+                    GameManager3d.instance.wechselt = false;
+                    GameManager3d.instance.backwechsel = false;
+                    spurwechsel = Vector3.zero;
+                }
+                else if (GameManager3d.instance.backwechsel && x > 0 && gameObject.transform.position.x >= wechselposition)
+                {
+                    x = 0;
+                    GameManager3d.instance.wechselt = false;
+                    GameManager3d.instance.backwechsel = false;
+                    spurwechsel = Vector3.zero;
+                }
+                else if (!GameManager3d.instance.backwechsel && x > 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x >= wechselposition + 20)
                 {
                     x = 0;
                     GameManager3d.instance.wechselt = false;
                     spurwechsel = Vector3.zero;
                 }
-                else if (x < 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x <= wechselposition - 20)
+                else if (!GameManager3d.instance.backwechsel && x < 0 && GameManager3d.instance.wechselt && gameObject.transform.position.x <= wechselposition - 20)
                 {
                     x = 0;
                     GameManager3d.instance.wechselt = false;
@@ -106,15 +129,6 @@ public class Player3d : MonoBehaviour
                 }
                 GameManager3d.instance.jumpposition = gameObject.transform.position;
                 jumpVector = new(0, 4 * GameManager3d.instance.speed, 0);
-            }
-
-            if (GameManager3d.instance.jumping && characterController.collisionFlags == CollisionFlags.Sides && GameManager3d.instance.wechselt)
-            {
-                characterController.stepOffset = 1;
-            }
-            else
-            {
-                characterController.stepOffset = 3;
             }
 
             //Jumping stop
@@ -179,6 +193,23 @@ public class Player3d : MonoBehaviour
             {
                 GameManager3d.instance.jumping = false;
                 characterController.Move(2 * Time.deltaTime * gravityMovement);
+            }
+
+            //Sides Collision
+            if (GameManager3d.instance.jumping && (characterController.collisionFlags & CollisionFlags.Sides) != 0 && GameManager3d.instance.wechselt)
+            {
+                characterController.stepOffset = 1;
+            }
+            else
+            {
+                characterController.stepOffset = characterController.height;
+            }
+
+            //Sides Collision komischeversion
+            if ((characterController.collisionFlags & CollisionFlags.Sides) != 0 && GameManager3d.instance.wechselt && GameManager3d.instance.strangewechsel && !GameManager3d.instance.backwechsel)
+            {
+                GameManager3d.instance.backwechsel = true;
+                x = -x;
             }
 
             // End Jumping

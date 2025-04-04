@@ -53,7 +53,6 @@ public class ResolutionSettings : MonoBehaviour
             }
             else
             {
-                Debug.Log(currentRes);
                 break; //At highest possible resolution for user so stop checking for more options
             }
         }
@@ -83,7 +82,7 @@ public class ResolutionSettings : MonoBehaviour
             Display myDisplay = Display.displays[i];
             int myWidth = myDisplay.systemWidth;
             int myHeight = myDisplay.systemHeight;
-            Debug.LogError("Display DETECTED: " + myWidth + "x" + myHeight); //Uncomment this line for debugging purposes to see which displays are being detected
+            //Debug.LogError("Display DETECTED: " + myWidth + "x" + myHeight); //Uncomment this line for debugging purposes to see which displays are being detected
 
             if (myWidth > largestResWidth && myHeight > largestResHeight)
             {

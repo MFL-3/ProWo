@@ -376,6 +376,7 @@
 "Assets/Scripts/ResolutionSettings.cs"
 "Assets/Scripts/ScoreText.cs"
 "Assets/Scripts/ScoreText3d.cs"
+"Assets/Scripts/Settingsopen.cs"
 "Assets/Scripts/Sliderscript.cs"
 "Assets/Scripts/Spawner3d.cs"
 "Assets/Scripts/TileSpawner.cs"

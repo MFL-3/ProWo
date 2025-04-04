@@ -21,6 +21,7 @@ ScriptsOnlyBuild:
     - ResolutionSettings
     - ScoreText
     - ScoreText3d
+    - Settingsopen
     - Sliderscript
     - Spawner3d
     - TileSpawner
@@ -50,10 +51,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -114,6 +113,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: Settingsopen
+    methodName: Opensettings
   - assembly: Assembly-CSharp
     fullTypeName: Twodopen
     methodName: AboutOpen
@@ -596,6 +598,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8370}
     - Class: 114
       Script: {instanceID: 8602}
+    - Class: 114
+      Script: {instanceID: 57778}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -647,7 +651,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 87acafdb1794d1f65aabf8e56c5ff06c
+      Hash: 6c402d9f24e02718257bea77aa8e4c3e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager3d
@@ -1863,6 +1867,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f7506898d49666513d57dd253974a49f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Settingsopen
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1872,4 +1882,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameOver3D.unity
   - Assets/Scenes/About.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Version
-    3.4/ProWoProjekt.exe
+    3.5/ProWoProjekt.exe

@@ -15,9 +15,13 @@ public class Transparentchange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.z <= GameManager3d.instance.player3d.transform.position.z + 10 && gameObject != null && GameManager3d.instance.player3d != null)
+        if (GameManager3d.instance.player3d != null)
         {
-            ren.material.color = new(ren.material.color.r, ren.material.color.g, ren.material.color.b, 0.1f);
+            if (gameObject.transform.position.z <= GameManager3d.instance.player3d.transform.position.z + 10)
+            {
+                ren.material.color = new(ren.material.color.r, ren.material.color.g, ren.material.color.b, 0.3f);
+            }
         }
+
     }
 }
