@@ -7,7 +7,6 @@ public class Hinderniss : MonoBehaviour
 {
     private void OnTriggerEnter()
     {
-        Debug.Log("Tile 3");
         GameManager.instance.theend = true;
     }
 }

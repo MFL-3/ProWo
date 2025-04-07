@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool theend = false;
     public bool start = true;
     public bool paused = false;
+    public bool falling = false;
     public bool strangeVersion;
 
     public Vector3 duckposition;

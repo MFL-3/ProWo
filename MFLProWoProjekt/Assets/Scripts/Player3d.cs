@@ -38,6 +38,7 @@ public class Player3d : MonoBehaviour
             ani.SetBool("trjumping", GameManager3d.instance.jumping);
             ani.SetBool("trduckedrun", GameManager3d.instance.ducked);
             ani.SetBool("end", GameManager3d.instance.theend);
+            ani.SetBool("trfall", GameManager3d.instance.falling);
             ani.speed = 1;
             // Move forward
             moveVector = Vector3.forward * GameManager3d.instance.speed;
@@ -217,6 +218,15 @@ public class Player3d : MonoBehaviour
             {
                 GameManager3d.instance.jumping = false;
                 currentGravity = 1;
+            }
+
+            if (!characterController.isGrounded && !GameManager3d.instance.jumping)
+            {
+                GameManager3d.instance.falling = true;
+            }
+            else
+            {
+                GameManager3d.instance.falling = false;
             }
 
             // Tile2 Collision

@@ -14,6 +14,7 @@ public class GameManager3d : MonoBehaviour
     public bool theend = false;
     public bool start = true;
     public bool paused = false;
+    public bool falling = false;
     public bool slowed = false;
     public bool wechselt = false;
     public bool backwechsel = false;

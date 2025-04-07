@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
             ani.SetBool("trjumping", GameManager.instance.jumping);
             ani.SetBool("trduckedrun", GameManager.instance.ducked);
             ani.SetBool("end", GameManager.instance.theend);
+            ani.SetBool("trfall", GameManager.instance.falling);
             // Move forward
             moveVector = Vector3.right * GameManager.instance.speed;
 
@@ -80,6 +81,14 @@ public class Player : MonoBehaviour
                 jumpVector = Vector3.zero;
             }
 
+            if (!characterController.isGrounded && !GameManager.instance.jumping)
+            {
+                GameManager.instance.falling = true;
+            }
+            else
+            {
+                GameManager.instance.falling = false;
+            }
             // Ducken
             if (GameManager.instance.strangeVersion)
             {
