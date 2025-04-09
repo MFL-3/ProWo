@@ -13,12 +13,12 @@ public class Wele3D : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            if (GameManager3d.instance.start)
+            else
             {
-                Movevert(GameManager3d.instance.speed);
+                Movevert(GameManager3d.instance.speed * 1.5f);
             }
 
-            if (gameObject.transform.position.y >= 40)
+            if (gameObject.transform.position.y >= 73)
             {
                 GameManager3d.instance.start = false;
             }
