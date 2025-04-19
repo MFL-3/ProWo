@@ -71,18 +71,32 @@ public class Player3d : MonoBehaviour
             else
             {
                 //Input
-                if ((Input.GetAxis("Horizontal") < 0) && !GameManager3d.instance.wechselt)
+                if ((Input.GetAxis("Horizontal") < 0) && !GameManager3d.instance.wechselt && gameObject.transform.position.x > -10)
                 {
                     x = -1;
                     GameManager3d.instance.wechselt = true;
                     wechselposition = gameObject.transform.position.x;
                 }
-                else if ((Input.GetAxis("Horizontal") > 0) && !GameManager3d.instance.wechselt)
+                else if ((Input.GetAxis("Horizontal") > 0) && !GameManager3d.instance.wechselt && gameObject.transform.position.x < 10)
                 {
                     x = 1;
                     GameManager3d.instance.wechselt = true;
                     wechselposition = gameObject.transform.position.x;
                 }
+
+                if (wechselposition >= 10)
+                {
+                    wechselposition = 20;
+                }
+                else if (wechselposition <= -10)
+                {
+                    wechselposition = -20;
+                }
+                else
+                {
+                    wechselposition = 0;
+                }
+
 
                 //Vector
                 if (GameManager3d.instance.wechselt)

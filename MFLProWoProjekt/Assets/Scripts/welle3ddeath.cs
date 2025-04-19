@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Welle3ddeath : MonoBehaviour
 {
+    private float myspeed;
+    void Start()
+    {
+        myspeed = GameManager3d.instance.speed;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -11,11 +16,11 @@ public class Welle3ddeath : MonoBehaviour
         {
             if (!GameManager3d.instance.theend)
             {
-                Movement(GameManager3d.instance.speed);
+                Movement(myspeed);
             }
             else
             {
-                Movement(GameManager3d.instance.speed * 8);
+                Movement(myspeed * 6);
             }
         }
     }
