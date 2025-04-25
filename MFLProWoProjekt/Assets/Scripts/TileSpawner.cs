@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class TileSpawner : MonoBehaviour
 {
-    public GameObject tile1;
-    public GameObject tile2;
-    public GameObject tile3;
+    [SerializeField] GameObject tile1;
+    [SerializeField] GameObject tile2;
+    [SerializeField] GameObject tile3;
 
-    public Vector3 spawnposition = new(0, -15, 0);
+    private Vector3 spawnposition = new(0, -15, 0);
 
-    public int nexttile;
-    public int prevtile;
-    public int prevprevtile;
-    public int currenttile;
+    private int nexttile;
+    private int prevtile;
+    private int prevprevtile;
+    private int currenttile;
 
     private bool treppe = false;
     private bool wastreppe = false;

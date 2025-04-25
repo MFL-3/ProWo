@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class Spawner3d : MonoBehaviour
 {
-    public int count = 0;
-    public bool slow = false;
-    public int slowspur;
+    private int count = 0;
+    private int endwert = 100;
+    private bool slow = false;
+    private int slowspur;
 
-    public Vector3 spawnposition1 = new(-20, 0, 0);
-    public Vector3 spawnposition2 = Vector3.zero;
-    public Vector3 spawnposition3 = new(20, 0, 0);
-    public Vector3 spawnposition4 = new(-30, 70, 980);
+    private Vector3 spawnposition1 = new(-20, 0, 0);
+    private Vector3 spawnposition2 = Vector3.zero;
+    private Vector3 spawnposition3 = new(20, 0, 0);
+    private Vector3 spawnposition4 = new(-30, 70, 980);
 
-    public int nexttile1;
-    public int nexttile2;
-    public int nexttile3;
+    private int nexttile1;
+    private int nexttile2;
+    private int nexttile3;
 
-    public int prevtile1;
-    public int prevtile2;
-    public int prevtile3;
+    private int prevtile1;
+    private int prevtile2;
+    private int prevtile3;
 
-    public int prevprevtile1;
-    public int prevprevtile2;
-    public int prevprevtile3;
+    private int prevprevtile1;
+    private int prevprevtile2;
+    private int prevprevtile3;
 
-    public int currenttile1;
-    public int currenttile2;
-    public int currenttile3;
+    private int currenttile1;
+    private int currenttile2;
+    private int currenttile3;
 
     private bool treppe1 = false;
     private bool treppe2 = false;
@@ -42,9 +43,8 @@ public class Spawner3d : MonoBehaviour
 
     [SerializeField] GameObject tile1slow;
 
-    GameObject player;
+    private GameObject player;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameManager3d.instance.player3d;
@@ -54,9 +54,9 @@ public class Spawner3d : MonoBehaviour
             Instantiate(tile1, spawnposition1, tile1.transform.rotation);
             Instantiate(tile1, spawnposition2, tile1.transform.rotation);
             Instantiate(tile1, spawnposition3, tile1.transform.rotation);
-            spawnposition1 = new Vector3(-20, 0, spawnposition1.z + 20);
-            spawnposition2 = new Vector3(0, 0, spawnposition2.z + 20);
-            spawnposition3 = new Vector3(20, 0, spawnposition3.z + 20);
+            spawnposition1 = new(-20, 0, spawnposition1.z + 20);
+            spawnposition2 = new(0, 0, spawnposition2.z + 20);
+            spawnposition3 = new(20, 0, spawnposition3.z + 20);
         }
         nexttile1 = Random.Range(1, 6);
         nexttile2 = Random.Range(1, 6);
@@ -83,7 +83,6 @@ public class Spawner3d : MonoBehaviour
         Instantiate(absperr, spawnposition4, absperr.transform.rotation);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (player != null)
@@ -96,7 +95,7 @@ public class Spawner3d : MonoBehaviour
             //absperrungen placen
             if (player.transform.position.z - spawnposition4.z >= 500)
             {
-                spawnposition4 = new Vector3(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
+                spawnposition4 = new(spawnposition4.x, spawnposition4.y, spawnposition4.z + 2000);
                 Instantiate(absperr, spawnposition4, absperr.transform.rotation);
             }
         }
@@ -106,9 +105,13 @@ public class Spawner3d : MonoBehaviour
     {
         for (int i = 0; i < 100; i++)
         {
-            if(count == 100)
+            if(count == endwert)
             {
                 count = 0;
+                if (endwert == 100)
+                {
+                    endwert = 55;
+                }
                 slow = true;
                 slowspur = Random.Range(1, 4);
             }
@@ -385,7 +388,6 @@ public class Spawner3d : MonoBehaviour
             {
                 count++;
             }
-
         }
     }
 }
