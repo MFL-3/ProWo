@@ -156,7 +156,7 @@ public class Player3d : MonoBehaviour
             // Ducken
             if (GameManager3d.instance.strangeVersion)
             {
-                if (Input.GetButtonDown("Ducken") && (!GameManager3d.instance.ducked) && characterController.isGrounded && (!GameManager3d.instance.start))
+                if (Input.GetButton("Ducken") && (!GameManager3d.instance.ducked) && characterController.isGrounded && (!GameManager3d.instance.start))
                 {
                     //Scale
                     characterController.height = 1.1f;
@@ -168,7 +168,7 @@ public class Player3d : MonoBehaviour
                 }
 
                 //Aufstehen
-                if (Input.GetButtonUp("Ducken") && GameManager3d.instance.ducked)
+                if (!Input.GetButton("Ducken") && GameManager3d.instance.ducked)
                 {
                     GameManager3d.instance.ducked = false;
                     characterController.center = new(0, 0.9f, 0);

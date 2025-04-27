@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
             if (GameManager.instance.strangeVersion)
             {
 
-                if (Input.GetButtonDown("Ducken") && (!GameManager.instance.ducked) && characterController.isGrounded && (!GameManager.instance.start))
+                if (Input.GetButton("Ducken") && (!GameManager.instance.ducked) && characterController.isGrounded && (!GameManager.instance.start))
                 {
                     //Scale
                     characterController.height = 1.1f;
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
 
                 }
                 //Aufstehen
-                if (Input.GetButtonUp("Ducken") && (GameManager.instance.ducked))
+                if (!Input.GetButton("Ducken") && GameManager.instance.ducked)
                 {
                     GameManager.instance.ducked = false;
                     characterController.center = new(0, 0.9f, 0);
