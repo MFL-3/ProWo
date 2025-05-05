@@ -78,7 +78,7 @@ public class GameManager3d : MonoBehaviour
                 slowed = false;
                 speed = oldspeed;
             }
-            //Scre erhoehen
+            //Score erhoehen
             score += Time.deltaTime;
             //nur ganzzahlige Werte ausgeben
             scorereal = (int)score;
@@ -101,6 +101,7 @@ public class GameManager3d : MonoBehaviour
 
         if (gameOver)
         {
+            Destroy(instance);
             SceneManager.LoadScene(4);
         }
     }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class HindernissDestroyer : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if (other.gameObject.CompareTag("Tile"))
+        if (GameManager.instance.player != null)
         {
-            GameManager.instance.theend = true;
+            if (gameObject.transform.position.x <= GameManager.instance.player.transform.position.x - 120)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 }

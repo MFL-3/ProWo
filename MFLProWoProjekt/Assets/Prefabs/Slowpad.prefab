@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4073907730170456308}
   - component: {fileID: 5220241848172880164}
   - component: {fileID: 6069690549928991771}
+  - component: {fileID: 2475734742992688353}
   m_Layer: 0
   m_Name: Slowpad
   m_TagString: Tile
@@ -120,6 +121,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 5, z: 10}
   m_Center: {x: 0, y: 2.5, z: 0}
+--- !u!114 &2475734742992688353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5349967330355010398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a556523c8ee8524c8a6831ee94517b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8459920420119819257
 GameObject:
   m_ObjectHideFlags: 0

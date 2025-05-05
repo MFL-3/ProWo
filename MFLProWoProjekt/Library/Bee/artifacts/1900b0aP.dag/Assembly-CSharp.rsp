@@ -322,6 +322,7 @@
 "Assets/Scripts/Hinderniss.cs"
 "Assets/Scripts/Hinderniss1.cs"
 "Assets/Scripts/HindernissDestroyer.cs"
+"Assets/Scripts/HindernissDestroyer3D.cs"
 "Assets/Scripts/MenuHiScore.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/Player3d.cs"

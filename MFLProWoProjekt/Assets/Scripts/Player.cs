@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
 
         if (!GameManager.instance.paused)
         {
-            gameObject.transform.position = new(gameObject.transform.position.x, gameObject.transform.position.y, 0);
             ani.speed = 1;
             ani.SetBool("trstart", GameManager.instance.start);
             ani.SetBool("trjumping", GameManager.instance.jumping);
@@ -50,7 +49,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                gravityMovement = new Vector3(0, -currentGravity, 0);
+                gravityMovement = new(0, -currentGravity, 0);
                 currentGravity += GameManager.instance.gravity * Time.deltaTime;
 
                 // Dont apply Gravity while grounded
@@ -71,7 +70,7 @@ public class Player : MonoBehaviour
                     characterController.height = 1.8f;
                 }
                 GameManager.instance.jumpposition = gameObject.transform.position;
-                jumpVector = new Vector3(0, 4 * GameManager.instance.speed, 0);
+                jumpVector = new(0, 4 * GameManager.instance.speed, 0);
             }
 
             //Jumping stop

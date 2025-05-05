@@ -22,12 +22,13 @@ public class Twodopen : MonoBehaviour
     {
         Application.Quit();
     }
-
+    
+    //About-Szenne laden
     public void AboutOpen()
     {
         SceneManager.LoadScene(5);
     }
-
+    //Menu laden
     public void MenuOpen()
     {
         SceneManager.LoadScene(0);

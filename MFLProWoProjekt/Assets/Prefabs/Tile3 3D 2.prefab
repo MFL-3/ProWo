@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 7146283056793402930}
   - component: {fileID: 577032182504794635}
   - component: {fileID: 1157362269166513429}
+  - component: {fileID: 7516238136297076461}
   m_Layer: 0
   m_Name: Tile3 3D 2
   m_TagString: Untagged
@@ -1659,6 +1660,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 20, z: 20.5}
   m_Center: {x: 10, y: 10, z: 10.25}
+--- !u!114 &7516238136297076461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244679112657525125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a556523c8ee8524c8a6831ee94517b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6299523388756290152
 PrefabInstance:
   m_ObjectHideFlags: 0

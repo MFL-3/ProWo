@@ -15,6 +15,7 @@ ScriptsOnlyBuild:
     - Hinderniss
     - Hinderniss1
     - HindernissDestroyer
+    - HindernissDestroyer3D
     - MenuHiScore
     - Player
     - Player3d
@@ -52,10 +53,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -76,7 +75,6 @@ ScriptsOnlyBuild:
   serializedClasses:
     Unity.ProBuilder:
     - UnityEngine.ProBuilder.AutoUnwrapSettings
-    - UnityEngine.ProBuilder.Edge
     - UnityEngine.ProBuilder.Face
     - UnityEngine.ProBuilder.Shapes.Cube
     - UnityEngine.ProBuilder.SharedVertex
@@ -331,6 +329,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8192}
     - Class: 114
       Script: {instanceID: 8488}
+    - Class: 114
+      Script: {instanceID: 42628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1886,6 +1886,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 548730c7b4dc315702de8403a1734bf7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HindernissDestroyer3D
   platform: 19
   scenePathNames:
   - Assets/Scenes/start.unity
@@ -1895,4 +1901,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameOver3D.unity
   - Assets/Scenes/About.unity
   playerPath: C:/Users/Michael Krol/Desktop/Computer/school/Projektwoche/2025 - Computerspiel/Spiel/Spielversionen/Version
-    Vater/Tsunami Runner.exe
+    4.6/Tsunami Runner.exe

@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
-    public float speed = 30;
+    public float speed = 20;
     public float gravity;
 
     public int scorereal = 0;
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
 
         if (gameOver)
         {
+            Destroy(instance);
             //Game Over Menu
             SceneManager.LoadScene(2);
         }

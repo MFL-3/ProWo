@@ -19,7 +19,10 @@ public class HighScoreText3d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        highScore = GameManager3d.instance.highScore;
+        if (GameManager3d.instance != null)
+        {
+            highScore = GameManager3d.instance.highScore;
+        }
         text.text = "High Score: " + highScore.ToString();
     }
 }

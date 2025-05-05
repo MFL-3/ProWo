@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 630176846814226102}
   - component: {fileID: 7146283056793402930}
   - component: {fileID: 2802639154260330250}
+  - component: {fileID: 5652550124417616891}
   m_Layer: 0
   m_Name: Tile2 3D 2
   m_TagString: Tile
@@ -1210,17 +1211,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 12492
   m_IsSelectable: 1
-  m_SelectedFaces: 05000000
-  m_SelectedEdges:
-  - a: 20
-    b: 21
-  - a: 22
-    b: 20
-  - a: 21
-    b: 23
-  - a: 23
-    b: 22
-  m_SelectedVertices: 14000000150000001600000017000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &2842647887567757123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,3 +1313,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 20, z: 20}
   m_Center: {x: 10, y: 10, z: 10}
+--- !u!114 &5652550124417616891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244679112657525125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a556523c8ee8524c8a6831ee94517b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
